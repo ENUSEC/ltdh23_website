@@ -11,6 +11,7 @@
   background-position: center; /* centers the image within the element */
   z-index: -1; /* places the image behind the other elements */
   animation: slideshow 30s linear infinite; /*animation slideshow with 30s duration and infinite repetition */
+  transition-duration: 5s; /* Hacked by lewis */
 }
 
 @keyframes slideshow {
