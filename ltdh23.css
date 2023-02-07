@@ -15,34 +15,34 @@
 
 @keyframes slideshow {
   0% {
-    background-image: url(image1.jpg);
+    background-image: url(Images/image1.jpg);
   }
   4.84% {
-    background-image: url(image1.jpg);
+    background-image: url(Images/image1.jpg);
   }
   5% {
-    background-image: url(image2.jpg);
+    background-image: url(Images/image2.jpg);
   }
   34.84% {
-    background-image: url(image2.jpg);
+    background-image: url(Images/image2.jpg);
   }
   35% {
-    background-image: url(image3.jpg);
+    background-image: url(Images/image3.jpg);
   }
   64.84% {
-    background-image: url(image3.jpg);
+    background-image: url(Images/image3.jpg);
   }
   65% {
-    background-image: url(image4.jpg);
+    background-image: url(Images/image4.jpg);
   }
   94.84% {
-    background-image: url(image4.jpg);
+    background-image: url(Images/image4.jpg);
   }
   95% {
-    background-image: url(image1.jpg);
+    background-image: url(Images/image1.jpg);
   }
   100% {
-    background-image: url(image1.jpg);
+    background-image: url(Images/image1.jpg);
   }
 }
 
