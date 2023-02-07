@@ -10,7 +10,7 @@
   background-size: cover; /* scales the image to cover the entire element */
   background-position: center; /* centers the image within the element */
   z-index: -1; /* places the image behind the other elements */
-  animation: slideshow 30s linear infinite; /*animation slideshow with 30s duration and infinite repetition */
+  animation: slideshow 5s linear infinite; /*animation slideshow with 30s duration and infinite repetition */
 }
 
 @keyframes slideshow {
