@@ -10,7 +10,7 @@
   background-size: cover; /* scales the image to cover the entire element */
   background-position: center; /* centers the image within the element */
   z-index: -1; /* places the image behind the other elements */
-  animation: slideshow 40s cubic-bezier(0, -6, 0.74, 8) infinite; /* Hacked by lewis */
+  animation: slideshow 40s cubic-bezier(0, 0, 0.74, 8) infinite; /* Hacked by lewis */
 }
 
 @keyframes slideshow {
