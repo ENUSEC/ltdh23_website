@@ -120,9 +120,24 @@ width: 80%;
   .tweets {
     display: none;
   }
+  .tweets-cfp {
+    display: none;
+  }
+  .tweets-cfs {
+    display: none;
+  }
 
   .timer-container {
     top: 50%;
+  }
+
+  .menu-container {
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .menu-container nav ul li:first-child {
+    margin-left: 10px;
   }
 }
 
