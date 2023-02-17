@@ -115,3 +115,11 @@ width: 80%;
 }
 }
 
+@media only screen and (max-width: 767px) {
+  /* adjust margin for non-desktop devices */
+  .tweets {
+    margin-top: 30px;
+  }
+}
+
+
