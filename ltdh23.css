@@ -33,7 +33,7 @@
 
 .timer-container {
   position: absolute;
-  top: 50%;
+  top: 25%;
   left: 50%;
   transform: translate(-50%, -50%); /* centers the container element on the page */
   text-align: center;
@@ -90,7 +90,7 @@ color: #ffffff; /* white */
 
 
 .tweets {
-	padding-top: 30%;
+	padding-top: 20%;
 	padding-left: 37%;
 }
 
@@ -118,8 +118,13 @@ width: 80%;
 @media only screen and (max-width: 767px) {
   /* adjust margin for non-desktop devices */
   .tweets {
-    margin-top: 30px;
+    display: none;
+  }
+
+  .timer-container {
+    top: 50%;
   }
 }
+
 
 
