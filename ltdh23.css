@@ -171,6 +171,7 @@ width: 80%;
 @media only screen and (max-width: 767px) {
   .iframe-container {
     padding-top: 80%; /* 5:4 aspect ratio */
+    width: 90%;
   }
 }
 
