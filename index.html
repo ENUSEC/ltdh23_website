@@ -53,8 +53,14 @@ body, html {
     text-align: center;
 }
 
+/* Media query for tablets and smartphones */
+@media (max-width: 768px) {
+    body, html {
+        background-image: url('background-mobile.png'); /* Background for mobile devices */
+    }
+}
+
 p {
-	text-width: 40%;
 	color: rgba(0, 0, 0, 0.3);
 	margin-top: 0px;
 }
@@ -68,7 +74,7 @@ p {
 }
 
 h1 {
-    font-size: 2em;
+    font-size: 2.5em;
     color: #5F939A;
 	margin-bottom: 0px;
 }
