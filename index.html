@@ -1,36 +1,85 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>LTDH23</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="ltdh23.css">
-<script src="ltdh23.js"></script>
-<link rel="preload" as="image" href="/Images/image1.jpg">
-<link rel="preload" as="image" href="/Images/image2.jpg">
-<link rel="preload" as="image" href="/Images/image3.jpg">
-<link rel="preload" as="image" href="/Images/image4.jpg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Tour Du Hack 2024 - Coming Soon</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-	<body>
-	<div class="menu-container">
-		<nav>
-		  <ul>
-			<li><a href="index.html">Countdown</a></li>
-			<li><a href="https://enusec.org/">ENUSEC Homepage</a></li>
-			<li><a href="https://ltdh23.eventbrite.co.uk">Tickets</a></li>
-			<li><a href="ltdh23-cfs.html">Call For Sponsors</a></li>
-			<li><a href="agenda.html">Agenda</a></li>
-		  </ul>
-		</nav>
-	  </div>
-	  <div class="background-image"></div>
-	  <div class="timer-container">
-		<h1>Le Tour Du Hack 2023...</h1>
-		<div id="timer"></div>
-	  </div>
+<body>
+    <div class="container">
+        <h1>Le Tour Du Hack 2024</h1>
+        <p>TW9yZSBpbmZvcm1hdGlvbiBjb21pbmcgc29vbiEgOyk=</p>
+        <div id="countdown"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
 
-	<br>
-	  <div class="tweets">
-		<a class="twitter-timeline" data-width="500" data-height="500" data-theme="dark" href="https://twitter.com/enusec?ref_src=twsrc%5Etfw">Tweets by enusec</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-	  </div>
-	</body>
+<script>
+function updateCountdown() {
+    const countdownElement = document.getElementById('countdown');
+    const eventDate = new Date('2024-05-18T09:00:00'); // Setting to 9am - unsure exact start time
+    const currentTime = new Date();
+    const timeLeft = eventDate - currentTime;
+
+    const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+    countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+    if (timeLeft < 0) {
+        clearInterval(countdownTimer);
+        countdownElement.innerHTML = "Event Started";
+    }
+}
+
+const countdownTimer = setInterval(updateCountdown, 1000);
+updateCountdown();
+
+</script>
+
+<style>
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('background.png'); /* Sets the background image */
+    background-size: cover; /* Ensures the background covers the entire viewport */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the background image from repeating */
+    color: white;
+    text-align: center;
+}
+
+p {
+	text-width: 40%;
+	color: rgba(0, 0, 0, 0.3);
+	margin-top: 0px;
+}
+
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h1 {
+    font-size: 2em;
+    color: #5F939A;
+	margin-bottom: 0px;
+}
+
+#countdown {
+    margin-top: 10px;
+    font-size: 1.5em;
+}
+
+</style>
+
+<!-- Wonder what this is... bHRkaHtjbVZrWDJobGNuSnBibWM9fQ== -->
+
 </html>
