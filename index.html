@@ -11,7 +11,7 @@
         <h1>Le Tour Du Hack 2024</h1>
 	<p style="color:white;">Scotland's biggest student-led cyber security conference returns!</p>
 	<p style="color:white;">GET TICKETS <a href="https://www.eventbrite.co.uk/e/le-tour-du-hack-2024-tickets-870074745987" target="_blank">HERE</a></p>
-        <p>TW9yZSBpbmZvcm1hdGlvbiBjb21pbmcgc29vbiEgOyk=</p>
+        <p id="secret">TW9yZSBpbmZvcm1hdGlvbiBjb21pbmcgc29vbiEgOyk=</p>
         <div id="countdown"></div>
     </div>
     <script src="script.js"></script>
@@ -62,12 +62,6 @@ body, html {
     }
 }
 
-p {
-	color: rgba(0, 0, 0, 0.3);
-	margin-top: 0px;
-}
-
-
 .container {
     position: absolute;
     top: 50%;
@@ -79,6 +73,11 @@ h1 {
     font-size: 2.5em;
     color: #5F939A;
 	margin-bottom: 0px;
+}
+
+#secret {
+	color: rgba(0, 0, 0, 0.3);
+	margin-top: 0px;
 }
 
 #countdown {
