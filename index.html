@@ -116,9 +116,6 @@ function updateCountdown() {
         countdownElement.innerHTML = "Event Started";
     }
 }
-
-const countdownTimer = setInterval(updateCountdown, 1000);
-updateCountdown();
 function showInfo(infoText) {
 	var modal = document.getElementById("info-modal");
 	var modalText = document.getElementById("modal-text");
@@ -129,6 +126,10 @@ function closeModal() {
   	var modal = document.getElementById("info-modal");
   	modal.style.display = "none";
 }
+
+const countdownTimer = setInterval(updateCountdown, 1000);
+updateCountdown();
+
 </script>
 <style>
 table {
