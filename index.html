@@ -18,6 +18,7 @@
 	<p style="color:white;">See you all next year! 🤞</p>
         <p id="secret">TW9yZSBpbmZvcm1hdGlvbiBjb21pbmcgc29vbiEgOyk=</p>
         <div id="countdown"></div>
+	<br>
 	
 	<table>
         <tr>
@@ -136,8 +137,15 @@ function updateCountdown() {
     countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
 
     if (timeLeft < 0) {
-        clearInterval(countdownTimer);
-        countdownElement.innerHTML = "Event Started";
+        const timeAfterEvent = currentTime - eventDate;
+        const twoDaysInMilliseconds = 2 * 24 * 60 * 60 * 1000;
+
+        if (timeAfterEvent > twoDaysInMilliseconds) {
+            clearInterval(countdownTimer);
+            countdownElement.innerHTML = "Conference Finished";
+        } else {
+            countdownElement.innerHTML = "Event Started";
+        }
     }
 }
 function showInfo(infoText) {
