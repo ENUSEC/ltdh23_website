@@ -336,6 +336,12 @@ section h2 {
     border: 2px solid #5F939A;
     margin-top: 1rem;
 }
+/* Media query for mobile devices (adjust the max-width as needed) */
+@media (max-width: 768px) {
+  .pdf-viewer {
+    display: none;
+  }
+}
 
 /* --- Venue Section --- */
 #venue .map-iframe {
@@ -402,4 +408,18 @@ footer {
 }
 .download-sponsors-button:hover {
     background-color: #a00b36;
+}
+
+body {
+    display: flex;
+    min-height: 100vh; /* Ensure body takes up full viewport height */
+    flex-direction: column;
+}
+main {
+    flex: 1; /* Allow main content area to grow and push footer down */
+}
+/* Optional: Add some padding to the bottom of main if needed to prevent content overlap */
+main {
+    flex: 1;
+    padding-bottom: 3rem; /* Adjust as needed */
 }

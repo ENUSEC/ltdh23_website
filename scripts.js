@@ -53,3 +53,18 @@ function openModal(id) {
 function closeModal(id) {
     document.getElementById(id).style.display = "none";
 }
+
+function handleResize() {
+  const pdfViewer = document.getElementById("pdf-viewer");
+  const mobileWidth = 768; // Adjust this value if needed
+
+  if (window.innerWidth <= mobileWidth) {
+    pdfViewer.style.display = "none"; // Hide on mobile
+  } else {
+    pdfViewer.style.display = "block"; // Show on larger screens (or however it's styled in your CSS)
+  }
+}
+
+// Call handleResize on page load and when the window is resized
+window.addEventListener("load", handleResize);
+window.addEventListener("resize", handleResize);
