@@ -1,0 +1,405 @@
+/* --- Basic Reset & Box Sizing --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #000000;
+  /* Dark background */
+  color: #ffffff;
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* --- Global Container --- */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+/* --- Navigation --- */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.logo {
+  height: 120px;
+  /* Increased from 50px for better visibility */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+nav a:hover {
+  color: #5F939A;
+  /* Primary colour */
+}
+
+/* --- Hero Section --- */
+#hero {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: #242424;
+  /* Dark grey background */
+  overflow: hidden;
+}
+
+/* Subtle animated code/matrix overlay (placeholder) */
+#hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Placeholder effect - in a real site, you might use an animated background or canvas. */
+  background: repeating-linear-gradient(to bottom,
+      rgba(95, 147, 154, 0.05),
+      rgba(95, 147, 154, 0.05) 2px,
+      transparent 2px,
+      transparent 4px);
+  pointer-events: none;
+  animation: drift 10s linear infinite;
+}
+
+@keyframes drift {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 0 100%;
+  }
+}
+
+#hero .hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+#hero h1 {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.countdown-timer {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 1.5rem;
+  margin: 1rem 0 2rem 0;
+  color: #5F939A;
+  /* Primary colour */
+}
+
+.registration-button {
+  padding: 1rem 2rem;
+  background-color: #D30D47;
+  /* Secondary colour */
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.registration-button:hover {
+  background-color: #a00b36;
+}
+
+/* --- Section Headings --- */
+section h2 {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #5F939A;
+  /* Primary colour */
+}
+
+/* --- About Section --- */
+#about .about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Placeholder for image carousel or video */
+.about-media {
+  background-color: #242424;
+  padding: 1rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+/* --- Schedule Section --- */
+/* --- Schedule Day Container --- */
+.schedule-day-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.schedule-track {
+  background-color: #242424;
+  padding: 1rem;
+  border: 1px solid #5F939A;
+  border-radius: 5px;
+}
+
+.schedule-track h4 {
+  color: #5F939A;
+  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.schedule-track ul {
+  list-style: none;
+  padding: 0;
+}
+
+.schedule-track li {
+  margin-bottom: 0.5rem;
+}
+
+/* Main Event Styling */
+.main-event {
+  grid-column: span 3;
+  /* Make the main event span all three columns */
+}
+
+/* CTF Event Styling */
+.ctf-event {
+  grid-column: span 3;
+  /* Make the CTF event span all three columns */
+}
+
+.schedule-table th,
+.schedule-table td {
+  border: 1px solid #5F939A;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+.schedule-table th {
+  background: #242424;
+  font-family: 'IBM Plex Mono', monospace;
+  color: #5F939A;
+}
+
+.schedule-table tr:hover {
+  background: rgba(95, 147, 154, 0.2);
+}
+
+.download-schedule {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #5F939A;
+  color: #000000;
+  border-radius: 4px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* --- Speakers Section --- */
+#speakers .speaker-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.speaker-card {
+  background-color: #242424;
+  padding: 1rem;
+  border-radius: 5px;
+  text-align: center;
+  position: relative;
+}
+
+.speaker-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.speaker-card:hover {
+    box-shadow: 0 0 10px #5F939A;
+}
+
+/* Modal (hidden by default) */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #000000;
+    margin: auto;
+    padding: 2rem;
+    border: 1px solid #5F939A;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+}
+
+.close-modal {
+    color: #ffffff;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* --- CFP Section --- */
+#cfp .cfp-content {
+    margin-top: 1rem;
+}
+
+.submit-abstract-button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #D30D47;
+    color: #ffffff;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.submit-abstract-button:hover {
+    background-color: #a00b36;
+}
+
+/* --- Sponsors Section --- */
+#sponsors .sponsor-content {
+    margin-top: 1rem;
+}
+
+.sponsor-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+    place-items: center;
+}
+
+.sponsor-logo {
+    max-width: 150px;
+    filter: brightness(150%);
+    transition: filter 0.3s;
+}
+
+.sponsor-logo:hover {
+    filter: brightness(250%);
+}
+
+/* Embedded PDF */
+.pdf-viewer {
+    width: 100%;
+    height: 900px;
+    border: 2px solid #5F939A;
+    margin-top: 1rem;
+}
+
+/* --- Venue Section --- */
+#venue .map-iframe {
+    width: 100%;
+    height: 400px;
+    border: 2px solid #5F939A;
+    margin-top: 1rem;
+}
+
+/* --- Registration Section --- */
+#registration .registration-container {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* --- Contact Section --- */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 1rem auto;
+}
+
+form input,
+form textarea {
+    padding: 0.75rem;
+    background: #242424;
+    border: 1px solid #5F939A;
+    border-radius: 4px;
+    color: #ffffff;
+}
+
+form button {
+    background: #5F939A;
+    color: #000000;
+    border: none;
+    padding: 0.75rem;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+form button:hover {
+    background: #4c7a80;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    background: #242424;
+}
+
+.download-sponsors-button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #D30D47; /* Or your desired button color */
+    color: #ffffff;
+    border-radius: 4px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.download-sponsors-button:hover {
+    background-color: #a00b36;
+}
