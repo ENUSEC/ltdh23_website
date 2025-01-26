@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Le Tour Du Hack 2025</title>
+
+  <!-- Fonts (Using IBM Plex Mono for headings, Roboto for body) -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=Roboto:wght@300;400;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    /* --- Basic Reset & Box Sizing --- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #000000; /* Dark background */
+      color: #ffffff;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* --- Global Container --- */
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 0;
+    }
+
+    /* --- Navigation --- */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 0;
+    }
+
+    .logo {
+      height: 50px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+    }
+
+    nav a:hover {
+      color: #5F939A; /* Primary colour */
+    }
+
+    /* --- Hero Section --- */
+    #hero {
+      position: relative;
+      min-height: 80vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: #242424; /* Dark grey background */
+      overflow: hidden;
+    }
+
+    /* Subtle animated code/matrix overlay (placeholder) */
+    #hero::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      /* Placeholder effect - in a real site, you might use an animated background or canvas. */
+      background: repeating-linear-gradient(
+        to bottom,
+        rgba(95, 147, 154, 0.05),
+        rgba(95, 147, 154, 0.05) 2px,
+        transparent 2px,
+        transparent 4px
+      );
+      pointer-events: none;
+      animation: drift 10s linear infinite;
+    }
+
+    @keyframes drift {
+      0% {
+        background-position: 0 0;
+      }
+      100% {
+        background-position: 0 100%;
+      }
+    }
+
+    #hero .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    #hero h1 {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .countdown-timer {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 1.5rem;
+      margin: 1rem 0 2rem 0;
+      color: #5F939A; /* Primary colour */
+    }
+
+    .registration-button {
+      padding: 1rem 2rem;
+      background-color: #D30D47; /* Secondary colour */
+      color: #ffffff;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+
+    .registration-button:hover {
+      background-color: #a00b36;
+    }
+
+    /* --- Section Headings --- */
+    section h2 {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #5F939A; /* Primary colour */
+    }
+
+    /* --- About Section --- */
+    #about .about-content {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    /* Placeholder for image carousel or video */
+    .about-media {
+      background-color: #242424;
+      padding: 1rem;
+      margin-top: 1rem;
+      text-align: center;
+    }
+
+    /* --- Schedule Section --- */
+    #schedule .schedule-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+
+    .schedule-table th,
+    .schedule-table td {
+      border: 1px solid #5F939A;
+      padding: 0.75rem;
+      text-align: left;
+    }
+
+    .schedule-table th {
+      background: #242424;
+      font-family: 'IBM Plex Mono', monospace;
+      color: #5F939A;
+    }
+
+    .schedule-table tr:hover {
+      background: rgba(95, 147, 154, 0.2);
+    }
+
+    .download-schedule {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #5F939A;
+      color: #000000;
+      border-radius: 4px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    /* --- Speakers Section --- */
+    #speakers .speaker-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+
+    .speaker-card {
+      background-color: #242424;
+      padding: 1rem;
+      border-radius: 5px;
+      text-align: center;
+      position: relative;
+    }
+
+    .speaker-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 50%;
+    }
+
+    .speaker-card:hover {
+      box-shadow: 0 0 10px #5F939A;
+    }
+
+    /* Modal (hidden by default) */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.8);
+      padding-top: 60px;
+    }
+
+    .modal-content {
+      background-color: #000000;
+      margin: auto;
+      padding: 2rem;
+      border: 1px solid #5F939A;
+      width: 80%;
+      max-width: 600px;
+      position: relative;
+    }
+
+    .close-modal {
+      color: #ffffff;
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      font-size: 2rem;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    /* --- CFP Section --- */
+    #cfp .cfp-content {
+      margin-top: 1rem;
+    }
+
+    .submit-abstract-button {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #D30D47;
+      color: #ffffff;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+
+    .submit-abstract-button:hover {
+      background-color: #a00b36;
+    }
+
+    /* --- Sponsors Section --- */
+    #sponsors .sponsor-content {
+      margin-top: 1rem;
+    }
+
+    .sponsor-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+      place-items: center;
+    }
+
+    .sponsor-logo {
+      max-width: 150px;
+      filter: brightness(150%);
+      transition: filter 0.3s;
+    }
+
+    .sponsor-logo:hover {
+      filter: brightness(250%);
+    }
+
+    /* Embedded PDF */
+    .pdf-viewer {
+      width: 100%;
+      height: 500px;
+      border: 2px solid #5F939A;
+      margin-top: 1rem;
+    }
+
+    /* --- Venue Section --- */
+    #venue .map-iframe {
+      width: 100%;
+      height: 400px;
+      border: 2px solid #5F939A;
+      margin-top: 1rem;
+    }
+
+    /* --- Registration Section --- */
+    #registration .registration-container {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    /* --- Contact Section --- */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 600px;
+      margin: 1rem auto;
+    }
+
+    form input, form textarea {
+      padding: 0.75rem;
+      background: #242424;
+      border: 1px solid #5F939A;
+      border-radius: 4px;
+      color: #ffffff;
+    }
+
+    form button {
+      background: #5F939A;
+      color: #000000;
+      border: none;
+      padding: 0.75rem;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 4px;
+    }
+
+    form button:hover {
+      background: #4c7a80;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 2rem 0;
+      background: #242424;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header & Navigation -->
+  <header class="container">
+    <div>
+      <!-- Logo: Use white version for dark background -->
+      <img class="logo" src="https://raw.githubusercontent.com/ENUSEC/ltdh23_website/refs/heads/main/images/LTDH_White_Colour.png" alt="Le Tour Du Hack 2025 Logo Placeholder" />
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#schedule">Schedule</a></li>
+        <li><a href="#speakers">Speakers</a></li>
+        <li><a href="#cfp">Call for Papers</a></li>
+        <li><a href="#sponsors">Sponsors</a></li>
+        <li><a href="#venue">Venue</a></li>
+        <li><a href="#registration">Registration</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="hero-content">
+      <h1>Le Tour Du Hack 2025</h1>
+      <div class="countdown-timer" id="countdown-timer">
+        Event Starts in...
+      </div>
+      <!-- Registration button placeholder (links to external ticketing site) -->
+      <button class="registration-button">
+        Coming Soon
+      </button>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="container">
+    <h2>About</h2>
+    <div class="about-content">
+      <p>
+        <strong>Le Tour Du Hack</strong> is a yearly cybersecurity and hacking conference
+        bringing together experts, enthusiasts, and curious minds for two days of
+        technical talks, demonstrations, and networking. Stay on top of the latest
+        developments and immerse yourself in the hacker culture!
+      </p>
+      <p>
+        <!-- Example timeline snippet / placeholder text -->
+        Founded in <em>20XX</em>, it has since grown to become one of the most
+        anticipated hacking events in Europe. Le Tour Du Hack 2025 will be bigger
+        and better than ever.
+      </p>
+      <div class="about-media">
+        <!-- Placeholder for an image carousel or embedded video from past events -->
+        <p>[Placeholder for Past Event Images/Video]</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Schedule Section -->
+  <section id="schedule" class="container">
+    <h2>Schedule</h2>
+    <p>Below is a placeholder schedule for the two-day event. Final details will be released soon!</p>
+
+    <table class="schedule-table">
+      <thead>
+        <tr>
+          <th>Time</th>
+          <th>Session</th>
+          <th>Speaker</th>
+          <th>Location</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Example Row -->
+        <tr>
+          <td>09:00 - 09:45</td>
+          <td>Keynote: The Future of Cyber Security</td>
+          <td>Dr. Placeholder</td>
+          <td>Main Hall</td>
+        </tr>
+        <tr>
+          <td>10:00 - 10:45</td>
+          <td>Breaking the Code: A Practical Demo</td>
+          <td>Mr. Hacker</td>
+          <td>Room 1</td>
+        </tr>
+        <!-- More rows as needed -->
+      </tbody>
+    </table>
+
+    <a href="schedule.pdf" class="download-schedule" target="_blank">Download Full Schedule (PDF)</a>
+  </section>
+
+  <!-- Speakers Section -->
+  <section id="speakers" class="container">
+    <h2>Speakers</h2>
+    <p>Meet the brilliant minds speaking at Le Tour Du Hack 2025.</p>
+
+    <div class="speaker-grid">
+      <!-- Speaker Card Example -->
+      <div class="speaker-card" onclick="openModal('modal-speaker-1')">
+        <img src="https://via.placeholder.com/200x200.png?text=Speaker+Photo" alt="Speaker Photo">
+        <h3>Speaker Name</h3>
+        <p>Title / Organisation</p>
+      </div>
+
+      <!-- Add more speaker-cards as needed -->
+    </div>
+
+    <!-- Speaker Detail Modal (Example) -->
+    <div id="modal-speaker-1" class="modal">
+      <div class="modal-content">
+        <span class="close-modal" onclick="closeModal('modal-speaker-1')">&times;</span>
+        <h3>Speaker Name - Talk Topic</h3>
+        <p><strong>Time Slot:</strong> 10:00 - 10:45, Day 1</p>
+        <p>
+          Detailed talk description goes here. Lorem ipsum dolor sit amet,
+          consectetur adipiscing elit. Praesent tempor ligula nec purus semper imperdiet...
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call for Papers (CFP) Section -->
+  <section id="cfp" class="container">
+    <h2>Call for Papers</h2>
+    <div class="cfp-content">
+      <p>
+        We welcome submissions on cybersecurity, hacking techniques, incident response,
+        hardware hacking, and more. Please review the submission guidelines below and
+        submit your abstracts by <em>placeholder deadline</em>.
+      </p>
+      <ul>
+        <li>Guidelines summary point 1</li>
+        <li>Guidelines summary point 2</li>
+        <li>Guidelines summary point 3</li>
+      </ul>
+
+      <!-- Example of a CFP Submission link or embedded form -->
+      <a href="#" class="submit-abstract-button">Submit Abstract</a>
+      <p>For enquiries, email: <a href="mailto:cfp@ltdh25.org">cfp@ltdh25.org</a></p>
+    </div>
+  </section>
+
+  <!-- Sponsors Section -->
+  <section id="sponsors" class="container">
+    <h2>Sponsors</h2>
+    <div class="sponsor-content">
+      <!-- PDF Sponsor Pack -->
+      <p>Download our Sponsorship Pack for more information:</p>
+      <iframe
+        class="pdf-viewer"
+        src="https://github.com/ENUSEC/ltdh23_website/blob/main/LTDH25_Call_For_Sponsors.pdf"
+        title="Sponsorship Pack PDF"
+      ></iframe>
+      <p>
+        <a href="https://github.com/ENUSEC/ltdh23_website/blob/main/LTDH25_Call_For_Sponsors.pdf"
+          download>Download Sponsorship Pack</a>
+      </p>
+      <p>
+        For sponsor enquiries, email:
+        <a href="mailto:sponsors@enusec.org" style="color:#D30D47;">sponsors@enusec.org</a>
+      </p>
+
+      <!-- Current Sponsors -->
+      <h3>Our Sponsors</h3>
+      <div class="sponsor-grid">
+        <!-- Example sponsor logo placeholders -->
+        <a href="#" target="_blank">
+          <img class="sponsor-logo" src="https://via.placeholder.com/150x50.png?text=Sponsor+1" alt="Sponsor 1">
+        </a>
+        <a href="#" target="_blank">
+          <img class="sponsor-logo" src="https://via.placeholder.com/150x50.png?text=Sponsor+2" alt="Sponsor 2">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Venue Section -->
+  <section id="venue" class="container">
+    <h2>Venue</h2>
+    <p><strong>Location:</strong> [Placeholder Venue Name, City]</p>
+    <iframe
+      class="map-iframe"
+      src="https://www.google.com/maps/embed?pb=!1m18..."
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+    <p>
+      <strong>Travel &amp; Accommodation:</strong><br/>
+      [Placeholder text for transport routes, recommended hotels, etc.]
+    </p>
+    <p>
+      <strong>Accessibility:</strong><br/>
+      [Placeholder text describing accessibility features of the venue.]
+    </p>
+  </section>
+
+  <!-- Registration Section -->
+  <section id="registration" class="container">
+    <h2>Registration</h2>
+    <div class="registration-container">
+      <p>Tickets are Coming Soon!</p>
+      <a href="#" target="_blank" class="registration-button">Visit Ticket Site</a>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="container">
+    <h2>Contact Us</h2>
+    <p>Have any questions or comments? Get in touch!</p>
+    <form>
+      <input type="text" name="name" placeholder="Name" required/>
+      <input type="email" name="email" placeholder="Email" required/>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <p>
+      <strong>Follow ENUSEC:</strong><br/>
+      [Links to social media: Twitter, LinkedIn, etc.]
+    </p>
+    <p>
+      <strong>Newsletter Subscription:</strong><br/>
+      [Placeholder for newsletter signup form or third-party embed]
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Le Tour Du Hack / ENUSEC</p>
+  </footer>
+
+  <!-- Countdown Timer Script -->
+  <script>
+    // Set event start and end dates
+    const eventStart = new Date("May 10, 2025 09:00:00").getTime();
+    const eventEnd = new Date("May 11, 2025 18:00:00").getTime();
+    const countdownTimerEl = document.getElementById("countdown-timer");
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+
+      // If current time is before event start
+      if (now < eventStart) {
+        const distance = eventStart - now;
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        const minutes = Math.floor(
+          (distance % (1000 * 60 * 60)) / (1000 * 60)
+        );
+        const seconds = Math.floor(
+          (distance % (1000 * 60)) / 1000
+        );
+        countdownTimerEl.textContent =
+          `Event Starts in: ${days}d ${hours}h ${minutes}m ${seconds}s`;
+      }
+      // If current time is between start and end
+      else if (now >= eventStart && now < eventEnd) {
+        const distance = eventEnd - now;
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        const minutes = Math.floor(
+          (distance % (1000 * 60 * 60)) / (1000 * 60)
+        );
+        const seconds = Math.floor(
+          (distance % (1000 * 60)) / 1000
+        );
+        countdownTimerEl.textContent =
+          `Event Ends in: ${days}d ${hours}h ${minutes}m ${seconds}s`;
+      }
+      // If current time is after event end
+      else {
+        countdownTimerEl.textContent = "The Conference Has Ended!";
+      }
+    }
+
+    setInterval(updateCountdown, 1000);
+
+    // Modal open/close logic
+    function openModal(id) {
+      document.getElementById(id).style.display = "block";
+    }
+    function closeModal(id) {
+      document.getElementById(id).style.display = "none";
+    }
+  </script>
+</body>
+</html>
