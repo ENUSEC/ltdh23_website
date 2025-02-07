@@ -60,7 +60,14 @@ document.addEventListener("DOMContentLoaded", function () {
   const menuToggle = document.querySelector(".menu-toggle");
   const navMenu = document.querySelector("nav ul");
 
+  // if (!menuToggle) {
+  //   console.error("Menu toggle element not found.");
+  //   return;
+  // }
+
   menuToggle.addEventListener("click", function () {
+    //console.log("Hamburger menu clicked.");
     navMenu.classList.toggle("active");
+    //console.log("navMenu class list:", navMenu.classList);
   });
 });

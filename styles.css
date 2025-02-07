@@ -73,6 +73,25 @@ nav a:hover {
 }
 
 @media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #000000;
+    padding: 1rem 0;
+    text-align: center;
+    z-index: 10; /* Added to ensure it sits on top */
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
   .menu-toggle {
     display: flex;
   }
