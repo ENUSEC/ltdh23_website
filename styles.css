@@ -396,7 +396,7 @@ section h2 {
 }
 
 .sponsor-link {
-  color: #5F939A; /* LTDH Blue */
+  color: #5F939A !important; /* LTDH Blue */
   font-weight: bold;
   text-decoration: none; /* Optional: Remove underline */
 }
