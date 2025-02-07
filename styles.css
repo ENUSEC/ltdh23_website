@@ -28,22 +28,27 @@ a {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem 0;
+  padding: 0.5rem 0;
 }
 
-/* --- Navigation --- */
 /* --- Navigation --- */
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 0;
   position: relative;
 }
 
 .logo {
-  height: 120px;
+  height: 100px;
   /* Increased from 50px for better visibility */
+}
+
+@media (max-width: 768px) {
+    .logo {
+        height: 70px;
+        /* Adjusted for smaller screens */
+    }
 }
 
 nav ul {
@@ -120,7 +125,7 @@ nav a:hover {
 /* --- Hero Section --- */
 #hero {
   position: relative;
-  min-height: 80vh;
+  min-height: 85vh;
   overflow: hidden; /* Ensures no overflow from the pseudo-element */
   background-color: #242424; /* Fallback background colour */
   display: flex;
@@ -157,10 +162,6 @@ nav a:hover {
         font-size: 2rem;
         padding: 8px 15px;
     }
-    .countdown-timer {
-        font-size: 1.2rem;
-        padding: 8px 15px;
-    }
 }
 
 #hero h1 {
@@ -171,11 +172,25 @@ nav a:hover {
 
 /* Countdown Timer */
 .countdown-timer {
+    uhh: idk;
+}
+
+.countdown-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
   font-family: 'IBM Plex Mono', monospace;
   font-size: 1.7rem;
-  margin: 1rem 0 2rem 0;
   color: #5F939A;
   /* Primary colour */
+}
+
+@media (max-width: 768px) {
+  .countdown-container {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
 .registration-button {

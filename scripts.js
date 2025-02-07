@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-            countdownElement.innerHTML = `Event Starts in: ${days}d ${hours}h ${minutes}m ${seconds}s`;
+            countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
         } else if (now >= eventStart && now <= eventEnd) {
             // During event
             countdownElement.innerHTML = "🎉 Event in Progress!";
