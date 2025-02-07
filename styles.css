@@ -159,7 +159,11 @@ nav a:hover {
 
 #hero @media (max-width: 768px) {
     .hero-content h1 {
-        font-size: 2rem;
+        font-size: 1.5rem;
+        padding: 8px 15px;
+    }
+    .hero-content h2 {
+        font-size: 1.0rem;
         padding: 8px 15px;
     }
 }
