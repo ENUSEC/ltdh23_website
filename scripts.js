@@ -44,10 +44,12 @@ function handleResize() {
   const pdfViewer = document.getElementById("pdf-viewer");
   const mobileWidth = 768; // Adjust this value if needed
 
-  if (window.innerWidth <= mobileWidth) {
-    pdfViewer.style.display = "none"; // Hide on mobile
-  } else {
-    pdfViewer.style.display = "block"; // Show on larger screens (or however it's styled in your CSS)
+  if (pdfViewer) { // Check if the element exists
+    if (window.innerWidth <= mobileWidth) {
+      pdfViewer.style.display = "none"; // Hide on mobile
+    } else {
+      pdfViewer.style.display = "block"; // Show on larger screens
+    }
   }
 }
 
