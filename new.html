@@ -302,7 +302,7 @@
     <!-- Leaflet Map Script -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      var map = L.map('map').setView([55.91903, -3.24380], 15); // Latitude & Longitude of Craiglockhart
+      var map = L.map('map').setView([55.91803716980033, -3.239552571828661], 16); // Latitude & Longitude of Craiglockhart
 
       // Load OpenStreetMap tiles
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -310,7 +310,7 @@
       }).addTo(map);
 
       // Add marker for Craiglockhart Campus
-      L.marker([55.91903, -3.24380]).addTo(map)
+      L.marker([55.91803716980033, -3.239552571828661]).addTo(map)
         .bindPopup("<center><b>Edinburgh Napier University</b><br>Craiglockhart Campus<br>219 Colinton Road, Edinburgh</center>")
         .openPopup();
     });
