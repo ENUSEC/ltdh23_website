@@ -54,3 +54,13 @@ function handleResize() {
 // Call handleResize on page load and when the window is resized
 window.addEventListener("load", handleResize);
 window.addEventListener("resize", handleResize);
+
+// Event listener for navigation menu
+document.addEventListener("DOMContentLoaded", function () {
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navMenu = document.querySelector("nav ul");
+
+  menuToggle.addEventListener("click", function () {
+    navMenu.classList.toggle("active");
+  });
+});

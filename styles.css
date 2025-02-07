@@ -32,11 +32,13 @@ a {
 }
 
 /* --- Navigation --- */
+/* --- Navigation --- */
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1rem 0;
+  position: relative;
 }
 
 .logo {
@@ -53,6 +55,47 @@ nav ul {
 nav a:hover {
   color: #5F939A;
   /* Primary colour */
+}
+
+/* --- Responsive Navigation --- */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle div {
+  width: 30px;
+  height: 3px;
+  background-color: #ffffff;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #000000;
+    padding: 1rem 0;
+    text-align: center;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  nav ul li {
+    padding: 1rem 0;
+  }
 }
 
 /* --- Hero Section --- */
