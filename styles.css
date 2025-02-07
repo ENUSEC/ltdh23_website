@@ -535,51 +535,51 @@ section h2 {
 
 /* --- Contact Section --- */
 .contact-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  text-align: center;
-  margin-top: 30px; /* Adds space after "Have questions or want to get involved?" */
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 20px !important;
+  justify-content: center !important;
+  text-align: center !important;
+  margin-top: 30px !important; /* Adds space after "Have questions or want to get involved?" */
 }
 
 .contact-item {
-  background: #1e1e1e; /* Darker background for contrast */
-  padding: 20px;
-  border-radius: 10px;
-  width: 280px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.2s ease-in-out;
+  background: #1e1e1e !important; /* Darker background for contrast */
+  padding: 20px !important;
+  border-radius: 10px !important;
+  width: 280px !important;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2) !important;
+  transition: transform 0.2s ease-in-out !important;
 }
 
 .contact-item:hover {
-  transform: translateY(-5px);
+  transform: translateY(-5px) !important;
 }
 
 .contact-item i {
-  font-size: 2rem;
-  color: #5F939A; /* LTDH Blue */
+  font-size: 2rem !important;
+  color: #5F939A !important; /* LTDH Blue */
   margin-bottom: 10px;
 }
 
 .contact-item h3 {
-  margin-bottom: 10px;
-  font-size: 1.2rem;
-  color: #fff;
+  margin-bottom: 10px !important;
+  font-size: 1.2rem !important;
+  color: #fff !important;
 }
 
 .contact-item p {
-  color: #ddd;
+  color: #ddd !important;
 }
 
 .contact-link {
-  color: #5F939A; /* LTDH Blue */
-  font-weight: bold;
-  text-decoration: none;
+  color: #5F939A !important; /* LTDH Blue */
+  font-weight: bold !important;
+  text-decoration: none !important;
 }
 
 .contact-link:hover {
-  text-decoration: underline;
+  text-decoration: underline !important;
 }
 
 /* Footer */
