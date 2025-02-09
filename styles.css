@@ -155,7 +155,11 @@ nav a:hover {
   z-index: 2;
 }
 
-
+#hero h1 {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
 
 #hero @media (max-width: 768px) {
     .hero-content h1 {
@@ -166,12 +170,6 @@ nav a:hover {
         font-size: 1.0rem;
         padding: 8px 15px;
     }
-}
-
-#hero h1 {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 3rem;
-  margin-bottom: 1rem;
 }
 
 /* Countdown Timer */
@@ -222,8 +220,8 @@ section h2 {
 }
 
 @media (max-width: 768px) {
-    #hero section h2 {
-        font-size: 1.8rem;
+    section h2 {
+        font-size: 1.45rem;
     }
 }
 
