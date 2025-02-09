@@ -1,24 +1,336 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
+
 <head>
-    <meta charset="UTF-8">
-    <title>ʞɔɒH υꓷ ɿυoT ǝ⅃</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styleold.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Le Tour Du Hack 2025</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=Roboto:wght@300;400;700&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <!-- Loading Screen -->
-    <div id="loading-screen">
-        <div class="loading-text" id="loading-text">Initialising</div>
+<header class="container">
+  <a href="https://ltdh.enusec.org">
+    <img class="logo"
+         src="https://raw.githubusercontent.com/ENUSEC/ltdh23_website/refs/heads/main/images/LTDH_White_Colour.png"
+         alt="Le Tour Du Hack 2025 Logo"/>
+  </a>
+    <nav>
+        <div class="menu-toggle">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#schedule">Schedule</a></li>
+            <li><a href="#speakers">Speakers</a></li>
+            <li><a href="#cfp">Call for Papers</a></li>
+            <li><a href="#sponsors">Sponsors</a></li>
+            <li><a href="#venue">Venue</a></li>
+<!--            <li><a href="#registration">Registration</a></li>-->
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="hero" class="hero-background">
+  <div class="hero-content">
+    <h1>Le Tour Du Hack 2025</h1>
+    <h2>10th - 11th May 2025</h2>
+    <div class="countdown-container">
+      <span class="countdown-label">Event Starts in:</span>
+      <span class="countdown-timer" id="countdown-timer"></span>
+    </div>
+    <br>
+    <button class="registration-button" onclick="window.location.href='https://ltdh25.eventbrite.co.uk'">
+      Tickets Coming Soon!
+      <!-- 🎟️ Secure Your Ticket -->
+    </button>
+  </div>
+</section>
+
+  <section id="about" class="container">
+    <h2>About</h2>
+    <div class="about-content">
+      <p>
+        <strong>Le Tour Du Hack</strong> is an annual student-run cybersecurity conference
+        bringing together experts, enthusiasts, and curious minds for two days of
+        technical talks, challenges, and of course, networking. Stay on top of the latest
+        developments and immerse yourself in the scottish cybersecurity community!
+      </p>
+      <p>
+        ENUSEC was founded in <em>2015</em>, making this year ENUSEC's 10th birthday! Because of this we are making sure
+        that Le Tour Du Hack 2025 will be bigger and better than ever. We cant wait for you to see what we have in store!
+      </p>
+      <div class="about-media">
+        <img src="images/grid.jpeg" alt="Past Event Graphic Grid" class="about-media-image">
+      </div>
+    </div>
+  </section>
+
+  <section id="sponsors" class="container">
+  <h2>Our Sponsors</h2>
+  <p>Le Tour Du Hack 2025 is made possible thanks to the generous support of our sponsors.</p>
+
+<p><strong>Are you a company or employer interested in supporting LTDH? </strong></p><a href="https://ltdh.enusec.org/cfs" target="_blank" class="cfs-link">Click here for our sponsor pack.</a>
+
+  <div class="sponsor-tier platinum-sponsors">
+    <h3>Platinum Sponsors</h3>
+    <div class="sponsor-grid">
+      <p>Coming Soon!</p>
+    </div>
+  </div>
+
+  <div class="sponsor-tier gold-sponsors">
+    <h3>Gold Sponsors</h3>
+    <div class="sponsor-grid">
+      <p>Coming Soon!</p>
+    </div>
+  </div>
+
+  <div class="sponsor-tier silver-sponsors">
+    <h3>Silver Sponsors</h3>
+    <div class="sponsor-grid">
+      <p>Coming Soon!</p>
+    </div>
+  </div>
+
+  <div class="sponsor-tier social-sponsor">
+    <h3>Social Sponsor</h3>
+    <div class="sponsor-grid">
+      <p>Coming Soon!</p>
+    </div>
+  </div>
+</section>
+
+  <section id="schedule" class="container">
+    <h2>Expected Schedule - Check Back Soon!</h2>
+    <p>Full schedule details are coming soon! Below is a general outline for each day of the event. <em>Exact times may
+        vary.</em></p>
+
+    <h3>Day One - Conference</h3>
+    <div class="schedule-day-container">
+      <div class="schedule-track main-event">
+        <h4>Main Event</h4>
+        <ul>
+          <li><strong>From 7:30 AM:</strong> Helpers Setup</li>
+          <li><strong>9:00 AM:</strong> Delegates Arrive & Refreshments</li>
+          <li><strong>9:30 AM:</strong> Event Starts</li>
+          <li><strong>12:30 PM - 1:30 PM:</strong> Lunch</li>
+          <li><strong>3:30 PM - 4:00 PM:</strong> Afternoon Refreshments</li>
+          <li><strong>6:00 PM:</strong> Event End</li>
+        </ul>
+      </div>
+      <div class="schedule-track">
+        <h4>Track 1</h4>
+        <ul>
+          <li>Details Coming Soon!</li>
+        </ul>
+      </div>
+      <div class="schedule-track">
+        <h4>Track 2</h4>
+        <ul>
+          <li>Details Coming Soon!</li>
+        </ul>
+      </div>
+      <div class="schedule-track">
+        <h4>Track 3</h4>
+        <ul>
+          <li>Details Coming Soon!</li>
+        </ul>
+      </div>
     </div>
 
-        <!-- Main Content -->
-    <div class="glitch-container" id="main-content">
-        <h1 class="glitch" data-text="Le Tour Du Hack 2025">Le Tour Du Hack 2025</h1>
-        <p class="subtitle">Coming Soon</p>
+    <h3>Day Two - Capture The Flag (CTF)</h3>
+    <div class="schedule-day-container">
+      <div class="schedule-track ctf-event">
+        <h4>CTF Event</h4>
+        <ul>
+<!--          <li><strong>From 8:30 AM:</strong> Helpers Setup</li>-->
+          <li><strong>9:00 AM:</strong> Players Arrive</li>
+          <li><strong>09:30 AM:</strong> CTF Starts</li>
+          <li><strong>1:00 PM:</strong> Lunch</li>
+          <li><strong>4:00 PM:</strong> CTF Finishes</li>
+          <li><strong>5:00 PM:</strong> Organisers Leave</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="speakers" class="container">
+    <h2>Speakers</h2>
+    <p>Meet the brilliant minds speaking at Le Tour Du Hack 2025...</p>
+    <br>
+    <div class="speaker-grid">
+      <div class="speaker-card" onclick="openModal('modal-speaker-1')">
+<!--        <img src="https://via.placeholder.com/200x200.png?text=Speaker+Photo" alt="Speaker Photo">-->
+        <h3>Speaker Information Coming Soon</h3>
+        <p>Check back soon, and keep an eye on our socials.</p>
+      </div>
+
     </div>
 
-    <script src="scriptold.js"></script>
+    <div id="modal-speaker-1" class="modal">
+      <div class="modal-content">
+        <span class="close-modal" onclick="closeModal('modal-speaker-1')">&times;</span>
+        <h3>#Hackerman - U found a secret feature! :D</h3>
+        <p><strong>Time Slot:</strong> All day, every day</p>
+        <p>
+          This modal will be used when the speakers have been announced. :')
+        </p>
+      </div>
+    </div>
+  </section>
+
+<section id="cfp" class="container">
+  <h2>📢 Call for Papers</h2>
+  <div class="cfp-content">
+
+    <p>
+      We invite submissions for <strong>Le Tour Du Hack 2025</strong> on a wide range of topics, including
+      cybersecurity, hacking techniques, incident response, hardware hacking, and more.
+      Whether you have a technical deep dive, an academic research paper, a fascinating personal project,
+      or industry insights to share—this is your chance to present it.
+    </p>
+
+    <div class="cfp-highlight">
+      <p><strong>🗓️ Submission Deadline: Sunday, April 20th</strong></p>
+      <p><em>The form may close early if we reach capacity, so don’t wait too long!</em></p>
+    </div>
+
+    <p>
+      The Call for Papers is open to <strong>everyone</strong>—students, professionals, researchers, and enthusiasts alike.
+      We welcome university dissertations, graduate projects, expert industry experiences, and unique security stories.
+      <strong>First-time speakers are especially encouraged to apply!</strong>
+    </p>
+
+    <ul>
+      <li>✅ Submissions must be original and the presenter's own work.</li>
+      <li>✅ Talks should be engaging, well-researched, and <em>somewhat</em>
+        relevant to cybersecurity.</li>
+      <li>✅ All talks must adhere to the
+        <a href="https://berlincodeofconduct.org/" target="_blank">Berlin Code of Conduct</a>.
+      </li>
+    </ul>
+
+    <div class="cfp-button-container">
+      <a href="http://bit.ly/LTDH-Call-For-Papers" class="submit-abstract-button">🚀 Submit a Talk</a>
+    </div>
+
+    <p class="cfp-contact">
+      📩 For enquiries, email: <a href="mailto:team@enusec.org">team@enusec.org</a>
+    </p>
+  </div>
+</section>
+
+
+
+
+<section id="venue" class="container">
+  <h2>Venue</h2>
+  <p><strong>Location:</strong> Edinburgh Napier University, Craiglockhart Campus</p>
+  <p><strong>Address:</strong> 219 Colinton Road, Edinburgh, EH14 1DJ, Scotland</p>
+  <br>
+   <!-- Map Container -->
+  <div id="map" style="height: 400px; border-radius: 10px;"></div>
+  <br>
+  <!-- Link to google maps -->
+  <a href="https://maps.app.goo.gl/Hi4xeYhpTcwu4U3Q6" target="_blank" class="map-link"
+     style="text-decoration: underline; color: #5F939A;">View on Google Maps</a>
+  <p><br>
+    <strong>Travel &amp; Accommodation:</strong><br />
+    The venue is easily accessible by public transport, with nearby bus and tram stops.
+    Edinburgh Waverley and Haymarket train stations are within a short distance.
+    A range of hotels and accommodations are available in the city centre and surrounding areas.
+  </p>
+    <br>
+  <p>
+    <strong>Accessibility:</strong><br />
+    The venue is fully wheelchair accessible, with elevator access to conference floors, and accessible restrooms. Please contact us in advance for any specific requirements.
+  </p>
+</section>
+
+
+<section id="registration" class="container">
+  <h2 style="font-size: 2rem;">📝 Registration</h2>
+  <div class="registration-container">
+    <div class="registration-highlight" style="margin-top: 1.5em;">
+      <h3 style="font-size: 2rem;">🎟️ Secure Your Ticket</h3>
+      <p style="font-size: 1.1rem;">Tickets will be released in multiple batches, so if you miss the first drop, there will be more chances!</p>
+      <p style="font-size: 1.1rem;">Stay tuned for updates and grab your spot before tickets sell out!</p>
+      <button class="registration-button" onclick="window.open('https://ltdh25.eventbrite.co.uk', '_blank')"
+              style="font-size: 1.2rem; padding: 0.8em 1.2em; margin-top: 1em;">
+        Get Your Tickets
+      </button>
+    </div>
+  </div>
+  <br>
+</section>
+
+<section id="contact" class="container">
+  <h2>📬 Contact Us</h2>
+  <div class="contact-grid">
+    <div class="contact-item">
+      <i class="fas fa-envelope"></i>
+      <h3>Email</h3>
+      <p><a href="mailto:team@enusec.org">team@enusec.org</a></p>
+    </div>
+
+    <div class="contact-item">
+      <i class="fas fa-users"></i>
+      <h3>Join the Community</h3>
+      <p>Chat with us on <a href="http://discord.enusec.org" class="contact-link">Discord</a>!</p>
+    </div>
+
+    <div class="contact-item">
+      <i class="fab fa-x-twitter"></i>
+      <h3>Follow Us</h3>
+      <p>
+        <a href="https://twitter.com/enusec" class="contact-link">X (Twitter)</a> |
+        <a href="https://www.instagram.com/team.enusec" class="contact-link">Instagram</a> |
+        <a href="https://www.facebook.com/enusec" class="contact-link">Facebook</a> |
+        <a href="https://www.linkedin.com/company/enusec/" class="contact-link">LinkedIn</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+
+  <footer>
+    <p>&copy; 2025 Le Tour Du Hack / ENUSEC</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+
+    <!-- Leaflet Map Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var map = L.map('map').setView([55.91803716980033, -3.239552571828661], 16); // Latitude & Longitude of Craiglockhart
+
+      // Load OpenStreetMap tiles
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      }).addTo(map);
+
+      // Add marker for Craiglockhart Campus
+      L.marker([55.91803716980033, -3.239552571828661]).addTo(map)
+        .bindPopup("<center><b>Edinburgh Napier University</b><br>Craiglockhart Campus<br>219 Colinton Road, Edinburgh</center>")
+        .openPopup();
+    });
+  </script>
+
 </body>
+
 </html>
