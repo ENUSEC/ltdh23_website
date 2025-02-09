@@ -214,11 +214,17 @@ nav a:hover {
 
 /* --- Section Headings --- */
 section h2 {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #5F939A;
-  /* Primary colour */
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #5F939A;
+    /* Primary colour */
+}
+
+@media (max-width: 768px) {
+    #hero section h2 {
+        font-size: 1.8rem;
+    }
 }
 
 /* --- About Section --- */
