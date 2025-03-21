@@ -585,6 +585,122 @@ section h2 {
     margin-top: 2rem;
 }
 
+/* --- Volunteer Section --- */
+#volunteer .volunteer-content {
+    margin: 1.5rem auto;
+    padding: 2rem;
+    background: #181818;
+    border-radius: 8px;
+    text-align: left;
+    max-width: 900px;
+    width: 90%;
+    line-height: 1.8;
+}
+
+#volunteer p {
+    font-size: 1.15rem;
+    margin-bottom: 1.2rem;
+}
+
+.volunteer-intro {
+    font-size: 1.3rem !important;
+    font-weight: 500;
+    margin-bottom: 0.6rem !important;
+    color: #5F939A;
+}
+
+.volunteer-subtitle {
+    font-size: 1.1rem !important;
+    margin-bottom: 1.5rem !important;
+}
+
+.volunteer-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+.volunteer-list li {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: flex-start;
+}
+
+.volunteer-list li i {
+    color: #5F939A;
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+    margin-top: 4px;
+}
+
+.volunteer-button-container {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.volunteer-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #D30D47;
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(211, 13, 71, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+.volunteer-button:hover {
+    background-color: #a00b36;
+    box-shadow: 0 6px 14px rgba(211, 13, 71, 0.5);
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    #volunteer .volunteer-content {
+        padding: 1rem;
+        width: 95%;
+    }
+    
+    .volunteer-intro {
+        font-size: 1.2rem !important;
+        text-align: center;
+    }
+    
+    .volunteer-subtitle {
+        font-size: 1rem !important;
+        text-align: center;
+    }
+    
+    .volunteer-list li {
+        font-size: 0.95rem;
+        margin-bottom: 1.2rem;
+        display: block;
+    }
+    
+    .volunteer-list li i {
+        display: inline-block;
+        margin-right: 5px;
+        width: 15px;
+        margin-bottom: 5px;
+    }
+    
+    .volunteer-list li strong {
+        display: block;
+        margin-bottom: 0.2rem;
+    }
+    
+    .volunteer-button {
+        width: 100%;
+        text-align: center;
+        font-size: 1rem !important;
+        padding: 0.8rem 1.5rem !important;
+    }
+}
+
 /* --- Contact Section --- */
 .contact-grid {
   display: flex !important;
