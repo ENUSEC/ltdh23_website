@@ -1,0 +1,192 @@
+/* Gallery Page Styles */
+
+/* Hero Section */
+#gallery-hero {
+  position: relative;
+  min-height: 40vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/ltdh_background.jpg') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+#gallery-hero .hero-content {
+  z-index: 2;
+  padding: 0 1rem;
+}
+
+#gallery-hero h1 {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+#gallery-hero p {
+  font-size: 1.4rem;
+  color: #5F939A;
+}
+
+/* Gallery Introduction */
+.gallery-intro-content {
+  max-width: 900px;
+  margin: 0 auto 1rem;
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+/* Carousel Styling */
+.swiper-container {
+  width: 80%;
+  height: 600px;
+  margin: 2rem auto 7rem; /* Increased bottom margin for pagination */
+  border-radius: 10px;
+  overflow: hidden; /* Changed back to hidden so next slides aren't visible */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  position: relative; /* Added to establish positioning context */
+}
+
+.slide-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide-content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #5F939A !important;
+  --swiper-navigation-size: 40px;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex !important; /* Force display */
+  align-items: center !important;
+  justify-content: center !important;
+  position: absolute !important;
+  top: 50% !important; /* Center vertically */
+  transform: translateY(-50%) !important;
+  z-index: 10 !important;
+  transition: all 0.3s ease;
+}
+
+.swiper-button-next {
+  right: 15px !important; /* Position at right edge with some padding */
+}
+
+.swiper-button-prev {
+  left: 15px !important; /* Position at left edge with some padding */
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: rgba(95, 147, 154, 0.8);
+  color: white !important;
+}
+
+/* Position pagination below the carousel */
+.swiper-pagination {
+  position: absolute;
+  bottom: -30px !important;
+}
+
+.swiper-pagination-bullet {
+  background: #fff;
+  opacity: 0.5;
+  margin: 0 5px;
+}
+
+.swiper-pagination-bullet-active {
+  background: #5F939A;
+  opacity: 1;
+}
+
+/* Event Highlights Cards */
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.highlight-card {
+  background-color: #242424;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.highlight-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.highlight-card i {
+  font-size: 3rem;
+  color: #5F939A;
+  margin-bottom: 1.5rem;
+}
+
+.highlight-card h3 {
+  color: #5F939A;
+  margin-bottom: 1rem;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.highlight-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .swiper-container {
+    height: 500px;
+  }
+  
+  #gallery-hero h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #gallery-hero h1 {
+    font-size: 2rem;
+  }
+  
+  #gallery-hero p {
+    font-size: 1.1rem;
+  }
+  
+  .gallery-intro-content {
+    font-size: 1rem;
+  }
+  
+  .swiper-container {
+    height: 400px;
+  }
+  
+  .highlights-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 576px) {
+  .swiper-container {
+    height: 300px;
+  }
+  
+  .highlights-grid {
+    grid-template-columns: 1fr;
+  }
+}

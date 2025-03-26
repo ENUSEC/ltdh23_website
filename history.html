@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LTDH 2024 - Previous Events</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="history-styles.css">
+
+  <style>
+    .agenda-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 3rem;
+  font-size: 1rem;
+}
+
+.agenda-table th,
+.agenda-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid rgba(95,147,154,0.2);
+}
+
+.agenda-table th {
+  font-family: 'IBM Plex Mono', monospace;
+  color: #5F939A;
+  font-size: 1.1rem;
+}
+
+.agenda-table tbody tr:hover {
+  background-color: rgba(95,147,154,0.1);
+}
+
+@media (max-width: 768px) {
+  .agenda-table thead {
+    display: none;
+  }
+
+  .agenda-table, .agenda-table tbody, .agenda-table tr, .agenda-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .agenda-table tr {
+    margin-bottom: 1rem;
+  }
+
+  .agenda-table td {
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+  }
+
+  .agenda-table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    padding-left: 15px;
+    font-weight: bold;
+    text-align: left;
+    color: #5F939A;
+  }
+
+  .agenda-table td:nth-of-type(1)::before { content: "Talk Title"; }
+  .agenda-table td:nth-of-type(2)::before { content: "Speaker(s)"; }
+  .agenda-table td:nth-of-type(3)::before { content: "Track"; }
+}
+
+  </style>
+</head>
+
+<body>
+  <header class="container">
+    <a href="https://ltdh.enusec.org">
+      <img class="logo" src="https://raw.githubusercontent.com/ENUSEC/ltdh23_website/refs/heads/main/images/LTDH_White_Colour.png" alt="Le Tour Du Hack Logo" />
+    </a>
+    <nav>
+      <ul>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#schedule">Schedule</a></li>
+        <li><a href="index.html#speakers">Speakers</a></li>
+        <li><a href="index.html#cfp">Call for Papers</a></li>
+        <li><a href="index.html#sponsors">Sponsors</a></li>
+        <li><a href="index.html#venue">Venue</a></li>
+        <li><a href="history.html" class="active">Previous Events</a></li>
+        <li><a href="index.html#volunteer">Volunteer</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="gallery-hero" class="hero-background">
+    <div class="hero-content">
+      <h1>Le Tour Du Hack 2024</h1>
+      <p>Conference Highlights and Agenda from Last Year</p>
+    </div>
+  </section>
+
+<!--  <section id="gallery-carousel" class="container">-->
+<!--    <div class="swiper-container">-->
+<!--      <div class="swiper-wrapper" id="gallery-swiper">-->
+<!--        &lt;!&ndash; Images loaded by your JS &ndash;&gt;-->
+<!--      </div>-->
+
+<!--      <div class="swiper-button-next"></div>-->
+<!--      <div class="swiper-button-prev"></div>-->
+<!--      <div class="swiper-pagination"></div>-->
+<!--    </div>-->
+<!--  </section>-->
+
+<section id="agenda-2024" class="container">
+  <h2>LTDH 2024 Agenda Highlights</h2>
+
+  <table class="agenda-table">
+    <thead>
+      <tr>
+        <th>Talk Title</th>
+        <th>Speaker(s)</th>
+        <th>Track</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Opening Keynote: AI & Cybersecurity - A Dystopian Future</td>
+        <td>Bill Buchanan</td>
+        <td>All Tracks</td>
+      </tr>
+      <tr>
+        <td>You're so arrogant... You probably think this talk is about you</td>
+        <td>Scott McGready</td>
+        <td>Main Track</td>
+      </tr>
+      <tr>
+        <td>Balancing Power and Peril: Navigating AI Regulation</td>
+        <td>George Brightman</td>
+        <td>Main Track</td>
+      </tr>
+      <tr>
+        <td>Compliance is More Fun Than You Think It Is</td>
+        <td>Dr Alice McGready</td>
+        <td>Main Track</td>
+      </tr>
+      <tr>
+        <td>Bugging You About Bug Bounty</td>
+        <td>Dan Walker</td>
+        <td>Main Track</td>
+      </tr>
+      <tr>
+        <td>Security Operations 101: Insights & Careers in the Blue Team</td>
+        <td>Harry McLaren</td>
+        <td>Main Track</td>
+      </tr>
+      <tr>
+        <td>Digital, Prosecutors & Jurors: What Could Possibly Go Wrong?</td>
+        <td>Basil Manoussos</td>
+        <td>Track 2</td>
+      </tr>
+      <tr>
+        <td>Can't Code, Won't Code: The Non-technical Stuff I Wasn't Prepared For</td>
+        <td>Ian Davies</td>
+        <td>Track 2</td>
+      </tr>
+      <tr>
+        <td>Women in the Industry: "Why Tech?" Panel Discussion</td>
+        <td>Panel</td>
+        <td>Track 2</td>
+      </tr>
+      <tr>
+        <td>Error 404: Peace of Mind Not Found</td>
+        <td>Charlie Harris</td>
+        <td>Track 2</td>
+      </tr>
+      <tr>
+        <td>Identifying Similar Images: Evaluating Perceptual Hashes</td>
+        <td>Dr Sean McKeown</td>
+        <td>Track 2</td>
+      </tr>
+      <tr>
+        <td>Espionage Revealed</td>
+        <td>Jordan Ropes</td>
+        <td>Track 2</td>
+      </tr>
+      <tr>
+        <td>Bluetooth Security: From Papers to Reality</td>
+        <td>Lisa</td>
+        <td>Track 3</td>
+      </tr>
+      <tr>
+        <td>Link Prediction: What Does the Future Hold?</td>
+        <td>Madeleine Langdon</td>
+        <td>Track 3</td>
+      </tr>
+      <tr>
+        <td>USB: Underestimated Security Blindspot</td>
+        <td>Gordon Gray</td>
+        <td>Track 3</td>
+      </tr>
+      <tr>
+        <td>Deepfake Dilemma</td>
+        <td>Lavanya Aggarwal</td>
+        <td>Track 3</td>
+      </tr>
+      <tr>
+        <td>Risk Exposure in Your Cybersecurity Supply Chain (Workshop)</td>
+        <td>Jacob Duane</td>
+        <td>Track 3</td>
+      </tr>
+      <tr>
+        <td>What I Wish I'd Known About Phishing Reporting</td>
+        <td>Peter Kirwan</td>
+        <td>Track 3</td>
+      </tr>
+      <tr>
+        <td>Closing Keynote</td>
+        <td>Don Smith</td>
+        <td>All Tracks</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+
+  <footer>
+    <p>&copy; 2025 Le Tour Du Hack / ENUSEC</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const gallerySwiper = document.getElementById('gallery-swiper');
+
+      for(let i = 0; i <= 5; i++) {
+        const slide = document.createElement('div');
+        slide.className = 'swiper-slide';
+        const img = document.createElement('img');
+        img.src = `images/gallery/${i}.jpg`;
+        img.alt = `LTDH Gallery Image ${i}`;
+        slide.appendChild(img);
+        gallerySwiper.appendChild(slide);
+      }
+
+      const swiper = new Swiper('.swiper-container', {
+        loop: true,
+        autoplay: { delay: 5000 },
+        navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+        pagination: { el: '.swiper-pagination', clickable: true },
+        effect: 'fade',
+        fadeEffect: { crossFade: true },
+        speed: 800
+      });
+    });
+  </script>
+</body>
+</html>
