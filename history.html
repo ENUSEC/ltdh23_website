@@ -105,20 +105,32 @@
     </div>
   </section>
 
-<!--  <section id="gallery-carousel" class="container">-->
-<!--    <div class="swiper-container">-->
-<!--      <div class="swiper-wrapper" id="gallery-swiper">-->
-<!--        &lt;!&ndash; Images loaded by your JS &ndash;&gt;-->
-<!--      </div>-->
-
-<!--      <div class="swiper-button-next"></div>-->
-<!--      <div class="swiper-button-prev"></div>-->
-<!--      <div class="swiper-pagination"></div>-->
-<!--    </div>-->
-<!--  </section>-->
+  <section id="gallery" class="container">
+    <h2>Event Gallery</h2>
+    <div class="photo-grid">
+      <!-- The images will be loaded dynamically via JavaScript -->
+    </div>
+  </section>
+  
+  <!-- Lightbox for image viewing -->
+  <div id="lightbox" class="lightbox">
+    <span class="close-lightbox">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+    <div class="lightbox-caption" id="lightbox-caption"></div>
+    <div class="lightbox-controls">
+      <button id="prev-btn" class="lightbox-nav-btn">&lt;</button>
+      <button id="next-btn" class="lightbox-nav-btn">&gt;</button>
+    </div>
+  </div>
 
 <section id="agenda-2024" class="container">
   <h2>LTDH 2024 Agenda Highlights</h2>
+  
+  <div class="youtube-link">
+    <a href="https://youtube.com/playlist?list=PLI5UsEUOX2mU49Cq8ZRVBlFKdGL7yT16d" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-youtube"></i> Watch the recorded sessions from LTDH 2024
+    </a>
+  </div>
 
   <table class="agenda-table">
     <thead>
@@ -234,29 +246,113 @@
   </footer>
 
   <script src="scripts.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      const gallerySwiper = document.getElementById('gallery-swiper');
-
-      for(let i = 0; i <= 5; i++) {
-        const slide = document.createElement('div');
-        slide.className = 'swiper-slide';
+      // Gallery images from the existing gallery folder - all 18 images
+      const galleryImages = [
+        { src: 'images/gallery/1.jpg', caption: 'LTDH 2024 Event 1' },
+        { src: 'images/gallery/2.jpg', caption: 'LTDH 2024 Event 2' },
+        { src: 'images/gallery/3.jpg', caption: 'LTDH 2024 Event 3' },
+        { src: 'images/gallery/4.jpg', caption: 'LTDH 2024 Event 4' },
+        { src: 'images/gallery/5.jpg', caption: 'LTDH 2024 Event 5' },
+        { src: 'images/gallery/6.jpg', caption: 'LTDH 2024 Event 6' },
+        { src: 'images/gallery/7.jpg', caption: 'LTDH 2024 Event 7' },
+        { src: 'images/gallery/8.jpg', caption: 'LTDH 2024 Event 8' },
+        { src: 'images/gallery/9.jpg', caption: 'LTDH 2024 Event 9' },
+        { src: 'images/gallery/10.jpg', caption: 'LTDH 2024 Event 10' },
+        { src: 'images/gallery/11.jpg', caption: 'LTDH 2024 Event 11' },
+        { src: 'images/gallery/12.jpg', caption: 'LTDH 2024 Event 12' },
+        { src: 'images/gallery/13.jpg', caption: 'LTDH 2024 Event 13' },
+        { src: 'images/gallery/14.jpg', caption: 'LTDH 2024 Event 14' },
+        { src: 'images/gallery/15.jpg', caption: 'LTDH 2024 Event 15' },
+        { src: 'images/gallery/16.jpg', caption: 'LTDH 2024 Event 16' },
+        { src: 'images/gallery/17.jpg', caption: 'LTDH 2024 Event 17' },
+        { src: 'images/gallery/18.jpg', caption: 'LTDH 2024 Event 18' }
+      ];
+      
+      // Get the container for the photo grid
+      const photoGrid = document.querySelector('.photo-grid');
+      
+      // Create gallery items
+      galleryImages.forEach((image, index) => {
+        const photoItem = document.createElement('div');
+        photoItem.className = 'photo-item';
+        photoItem.dataset.index = index;
+        
         const img = document.createElement('img');
-        img.src = `images/gallery/${i}.jpg`;
-        img.alt = `LTDH Gallery Image ${i}`;
-        slide.appendChild(img);
-        gallerySwiper.appendChild(slide);
+        img.src = image.src;
+        img.alt = image.caption;
+        img.loading = 'lazy'; // Lazy loading for better performance
+        
+        photoItem.appendChild(img);
+        photoGrid.appendChild(photoItem);
+        
+        // Add click event to open lightbox
+        photoItem.addEventListener('click', function() {
+          openLightbox(index);
+        });
+      });
+      
+      // Lightbox functionality
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      const lightboxCaption = document.getElementById('lightbox-caption');
+      const closeLightbox = document.querySelector('.close-lightbox');
+      const prevBtn = document.getElementById('prev-btn');
+      const nextBtn = document.getElementById('next-btn');
+      
+      let currentImageIndex = 0;
+      
+      function openLightbox(index) {
+        currentImageIndex = index;
+        updateLightboxContent();
+        lightbox.style.display = 'block';
+        document.body.style.overflow = 'hidden'; // Prevent scrolling when lightbox is open
       }
-
-      const swiper = new Swiper('.swiper-container', {
-        loop: true,
-        autoplay: { delay: 5000 },
-        navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
-        pagination: { el: '.swiper-pagination', clickable: true },
-        effect: 'fade',
-        fadeEffect: { crossFade: true },
-        speed: 800
+      
+      function closeLightboxFunc() {
+        lightbox.style.display = 'none';
+        document.body.style.overflow = 'auto'; // Restore scrolling
+      }
+      
+      function updateLightboxContent() {
+        lightboxImg.src = galleryImages[currentImageIndex].src;
+        lightboxCaption.textContent = galleryImages[currentImageIndex].caption;
+      }
+      
+      function showPrevImage() {
+        currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
+        updateLightboxContent();
+      }
+      
+      function showNextImage() {
+        currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
+        updateLightboxContent();
+      }
+      
+      // Event listeners for lightbox controls
+      closeLightbox.addEventListener('click', closeLightboxFunc);
+      lightbox.addEventListener('click', function(e) {
+        // Close lightbox when clicking outside the image
+        if (e.target === lightbox) {
+          closeLightboxFunc();
+        }
+      });
+      
+      prevBtn.addEventListener('click', showPrevImage);
+      nextBtn.addEventListener('click', showNextImage);
+      
+      // Keyboard navigation
+      document.addEventListener('keydown', function(e) {
+        if (lightbox.style.display === 'block') {
+          if (e.key === 'Escape') {
+            closeLightboxFunc();
+          } else if (e.key === 'ArrowLeft') {
+            showPrevImage();
+          } else if (e.key === 'ArrowRight') {
+            showNextImage();
+          }
+        }
       });
     });
   </script>
