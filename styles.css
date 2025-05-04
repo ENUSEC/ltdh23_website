@@ -430,144 +430,101 @@ section h2 {
 /* --- Sponsors Section --- */
 #sponsors {
   text-align: center;
-  padding: 3rem 0;
+  padding: 2rem 0;
   background-color: #181818;
-  border-top: 2px solid #5F939A;
+  border-radius: 8px;
+  margin: 2rem auto;
+  max-width: 1200px;
+  width: 90%;
 }
 
 #sponsors h2 {
-  font-size: 2.5rem;
   margin-bottom: 1rem;
   color: #5F939A;
-}
-
-.sponsor-tier {
-  margin-bottom: 2rem;
-  /* Add optional padding to emphasise the gradient backgrounds */
-  padding: 1.5rem 0;
-}
-
-.cfs-link {
-  color: #5F939A !important; /* LTDH Blue */
-  font-weight: bold;
-  text-decoration: none; /* Optional: Remove underline */
-}
-
-.sponsor-link:hover {
-  text-decoration: underline; /* Optional: Add underline on hover */
-}
-
-/* ---- PLATINUM SPONSORS ---- */
-.platinum-sponsors h3 {
   font-size: 2rem;
-  /* Metallic gradient text (soft silver/platinum) */
-  background: linear-gradient(90deg, #bcc2c2, #f0f0f0);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: inline-block;
-  margin-bottom: 1rem;
-  padding-bottom: 5px;
-  /* Matching border */
-  border-bottom: 2px solid #bcc2c2;
 }
 
-.platinum-sponsors .sponsor-logo {
-  max-width: 220px;
-  filter: brightness(150%) drop-shadow(0 0 10px #E5E4E2);
+.sponsors-wrapper {
+  width: 100%;
+  max-width: 1000px;
+  margin: 2rem auto;
 }
 
-/* ---- GOLD SPONSORS ---- */
-.gold-sponsors h3 {
-  font-size: 2rem;
-  /* Metallic gradient text (soft gold) */
-  background: linear-gradient(90deg, #cbb735, #ffe44f);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: inline-block;
-  margin-bottom: 1rem;
-  padding-bottom: 5px;
-  /* Matching border */
-  border-bottom: 2px solid #cbb735;
-}
-
-.gold-sponsors .sponsor-logo {
-  max-width: 180px;
-  filter: brightness(150%) drop-shadow(0 0 10px #FFD700);
-}
-
-/* ---- SILVER SPONSORS ---- */
-.silver-sponsors h3 {
-  font-size: 2rem;
-  /* Metallic gradient text (silver) */
-  background: linear-gradient(90deg, #adafb2, #e4e4e4);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: inline-block;
-  margin-bottom: 1rem;
-  padding-bottom: 5px;
-  /* Matching border */
-  border-bottom: 2px solid #adafb2;
-}
-
-.silver-sponsors .sponsor-logo {
-  max-width: 150px;
-  filter: brightness(150%) drop-shadow(0 0 10px #C0C0C0);
-}
-
-/* ---- SOCIAL SPONSOR ---- */
-.social-sponsor h3 {
-  font-size: 2rem;
-  /* Metallic gradient text (Le Tour Blue with a subtle shift) */
-  background: linear-gradient(90deg, #5F939A, #86ABB5);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: inline-block;
-  margin-bottom: 1rem;
-  padding-bottom: 5px;
-  /* Matching border */
-  border-bottom: 2px solid #5F939A;
-}
-
-.social-sponsor .sponsor-logo {
-  max-width: 170px;
-  filter: brightness(150%) drop-shadow(0 0 10px #5F939A);
-}
-
-/* General Sponsor Logo Styling */
-.sponsor-grid {
+.sponsor-row {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 1.5rem;
-  padding-top: 1rem;
+  align-items: center;
+  margin-bottom: 2rem;
+  gap: 3.5rem;
 }
 
-.sponsor-logo {
-  transition: transform 0.3s ease, filter 0.3s ease;
+.sponsor-row:first-child {
+  gap: 4.5rem;
 }
 
-.sponsor-logo:hover {
-  transform: scale(1.1);
+#sponsors .sponsor-logo {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  transition: transform 0.3s ease;
 }
 
-/* Responsive layout for smaller screens */
+#sponsors .sponsor-logo:hover {
+  transform: scale(1.05);
+}
+
+/* More responsive breakpoints for better scaling */
+@media (max-width: 1200px) {
+  .sponsor-row {
+    gap: 3rem;
+  }
+  
+  .sponsor-row:first-child {
+    gap: 3.5rem;
+  }
+  
+  #sponsors .sponsor-logo {
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 992px) {
+  .sponsor-row {
+    gap: 2rem;
+  }
+  
+  .sponsor-row:first-child {
+    gap: 2.5rem;
+  }
+  
+  #sponsors .sponsor-logo {
+    max-width: 240px;
+  }
+}
+
 @media (max-width: 768px) {
-  .sponsor-grid {
+  .sponsors-wrapper {
+    max-width: 90%;
+  }
+  
+  .sponsor-row {
     flex-direction: column;
-    align-items: center;
+    gap: 1.5rem;
   }
+  
+  .sponsor-row:first-child {
+    gap: 1.5rem;
+  }
+  
+  #sponsors .sponsor-logo {
+    max-width: 260px;
+  }
+}
 
-  .platinum-sponsors .sponsor-logo {
-    max-width: 180px;
-  }
-  .gold-sponsors .sponsor-logo {
-    max-width: 160px;
-  }
-  .silver-sponsors .sponsor-logo {
-    max-width: 140px;
-  }
-  .social-sponsor .sponsor-logo {
-    max-width: 150px;
+/* Extra small devices */
+@media (max-width: 576px) {
+  #sponsors .sponsor-logo {
+    max-width: 220px;
   }
 }
 
