@@ -1122,3 +1122,113 @@ main {
         text-align: center;
     }
 }
+
+/* --- CTF Section Styling --- */
+.ctf-container {
+  margin: 2rem 0;
+}
+
+.ctf-info {
+  background-color: #242424;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-left: 4px solid #D30D47;
+}
+
+.ctf-info h4 {
+  color: #D30D47;
+  font-size: 1.6rem;
+  margin-bottom: 1.2rem;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.ctf-info p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+}
+
+.ctf-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.ctf-highlight-item {
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background-color: #181818;
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+.ctf-highlight-item i {
+  font-size: 1.5rem;
+  color: #D30D47;
+  margin-top: 0.2rem;
+}
+
+.ctf-highlight-item p {
+  margin: 0;
+}
+
+.ctf-essentials {
+  background-color: rgba(255, 187, 0, 0.1);
+  border-left: 3px solid #FFBB00;
+  padding: 1rem 1.5rem;
+  border-radius: 6px;
+  margin-top: 1.5rem;
+}
+
+.ctf-essentials h5 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #FFBB00;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.ctf-essentials p {
+  margin-bottom: 0;
+}
+
+.ctf-info a {
+  color: #5F939A;
+  font-weight: bold;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.ctf-info a:hover {
+  color: #D30D47;
+}
+
+/* Mobile responsiveness for CTF section */
+@media (max-width: 768px) {
+  .ctf-highlights {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .ctf-highlight-item {
+    min-width: 100%;
+  }
+  
+  .ctf-info h4 {
+    font-size: 1.4rem;
+  }
+  
+  .ctf-info p {
+    font-size: 1rem;
+  }
+  
+  .ctf-essentials h5 {
+    font-size: 1.1rem;
+  }
+}
