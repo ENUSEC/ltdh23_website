@@ -379,7 +379,7 @@ section h2 {
 
 .keynote-event {
   background-color: #242424;
-  border-left: 3px solid #FFBB00;
+  border-left: 3px solid #8A2BE2;
 }
 
 .panel-event {
@@ -402,7 +402,7 @@ section h2 {
 }
 
 .talk-item.keynote {
-  border-left: 3px solid #FFBB00;
+  border-left: 3px solid #8A2BE2;
 }
 
 .talk-item.panel {
