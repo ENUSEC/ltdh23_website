@@ -30,7 +30,29 @@ document.addEventListener("DOMContentLoaded", function () {
     setInterval(updateCountdown, 1000); // Update every second for real-time countdown
 });
 
-
+// Schedule tabs functionality
+function showScheduleTab(tabId) {
+  // Hide all tab contents
+  const tabContents = document.querySelectorAll('.schedule-tab-content');
+  tabContents.forEach(content => {
+    content.classList.remove('active');
+  });
+  
+  // Remove active class from all tab buttons
+  const tabButtons = document.querySelectorAll('.schedule-tab-btn');
+  tabButtons.forEach(button => {
+    button.classList.remove('active');
+  });
+  
+  // Show the selected tab content
+  document.getElementById(tabId).classList.add('active');
+  
+  // Add active class to the clicked button
+  const selectedButton = document.querySelector(`.schedule-tab-btn[onclick="showScheduleTab('${tabId}')"]`);
+  if (selectedButton) {
+    selectedButton.classList.add('active');
+  }
+}
 
 // Modal open/close logic
 function openModal(id) {

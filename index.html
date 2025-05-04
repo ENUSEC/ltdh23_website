@@ -169,40 +169,474 @@
 </section> -->
 
   <section id="schedule" class="container">
-    <h2>Expected Schedule - Check Back Soon!</h2>
-    <p>Full schedule details are coming soon! Below is a general outline for each day of the event. <em>Exact times may
-        vary.</em></p>
+    <h2>Conference Schedule</h2>
+    <p>Here's the full schedule for Le Tour Du Hack 2025. We have three exciting tracks of presentations running in parallel.</p>
 
-    <h3>Day One - Conference</h3>
-    <div class="schedule-day-container">
-      <div class="schedule-track main-event">
-        <h4>Main Event</h4>
-        <ul>
-          <li><strong>From 7:30 AM:</strong> Helpers Setup</li>
-          <li><strong>9:00 AM:</strong> Delegates Arrive & Refreshments</li>
-          <li><strong>9:30 AM:</strong> Event Starts</li>
-          <li><strong>12:30 PM - 1:30 PM:</strong> Lunch</li>
-          <li><strong>3:30 PM - 4:00 PM:</strong> Afternoon Refreshments</li>
-          <li><strong>6:00 PM:</strong> Event End</li>
-        </ul>
+    <div class="schedule-tabs">
+      <button class="schedule-tab-btn active" onclick="showScheduleTab('general')">Overview</button>
+      <button class="schedule-tab-btn" onclick="showScheduleTab('track1')">Track 1</button>
+      <button class="schedule-tab-btn" onclick="showScheduleTab('track2')">Track 2</button>
+      <button class="schedule-tab-btn" onclick="showScheduleTab('track3')">Track 3</button>
+      <button class="schedule-tab-btn" onclick="showScheduleTab('keynotes')">Keynotes and Panel Discussion</button>
+    </div>
+
+    <!-- General Conference Schedule -->
+    <div id="general" class="schedule-tab-content active">
+      <div class="timetable">
+        <div class="time-block common-event">
+          <span class="time">09:00 - 09:30</span>
+          <div class="event-content">
+            <h4>Registration</h4>
+          </div>
+        </div>
+        
+        <div class="time-block common-event">
+          <span class="time">09:30 - 10:00</span>
+          <div class="event-content">
+            <h4>Opening Remarks - Track 2</h4>
+          </div>
+        </div>
+        
+        <div class="time-block keynote-event">
+          <span class="time">10:00 - 10:45</span>
+          <div class="event-content">
+            <h4>Opening Keynote - Track 2</h4>
+            <p>Bill Buchanan, Edinburgh Napier University</p>
+          </div>
+        </div>
+        
+        <div class="time-block">
+          <span class="time">10:45 - 11:15</span>
+          <div class="event-content">
+            <div class="multi-track-container">
+              <div class="track-item track1">
+                <h4>Adrian Smales</h4>
+                <p>Health, IoT, Robotics & Digital Evidence</p>
+              </div>
+              <div class="track-item track2">
+                <h4>James Kwaan</h4>
+                <p>10 Years on, What is new on the threat landscape?</p>
+              </div>
+              <div class="track-item track3">
+                <h4>Karen Taljard</h4>
+                <p>Burning the candle at all ends</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="time-block break-event">
+          <span class="time">11:15 - 11:20</span>
+          <div class="event-content">
+            <h4>Break</h4>
+          </div>
+        </div>
+        
+        <div class="time-block">
+          <span class="time">11:20 - 12:20</span>
+          <div class="event-content">
+            <div class="multi-track-container">
+              <div class="track-item track1">
+                <h4>Michael Varley</h4>
+                <p>Ransomware Diaries: Hackers, Hostages and the Price of Panic</p>
+              </div>
+              <div class="track-item track2">
+                <h4>Basil Manoussos</h4>
+                <p>Digital Evidence in the times of Artificial Intelligence. A glimpse into the future</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="time-block break-event">
+          <span class="time">12:30 - 13:30</span>
+          <div class="event-content">
+            <h4>Lunch</h4>
+          </div>
+        </div>
+        
+        <div class="time-block panel-event">
+          <span class="time">13:30 - 14:15</span>
+          <div class="event-content">
+            <h4>Panel Discussion - Track 2</h4>
+            <p>Neurodiversity in Cyber - Superpower vs. Kryptonite?</p>
+          </div>
+        </div>
+        
+        <div class="time-block break-event">
+          <span class="time">14:15 - 14:20</span>
+          <div class="event-content">
+            <h4>Break</h4>
+          </div>
+        </div>
+        
+        <div class="time-block">
+          <span class="time">14:20 - 15:50</span>
+          <div class="event-content">
+            <div class="multi-track-container">
+              <div class="track-item track1">
+                <h4>David Brown</h4>
+                <p>Cyber War Chronicles: My Path to Becoming a DFIR Consultant</p>
+              </div>
+              <div class="track-item track2">
+                <h4>Eliot Bolster</h4>
+                <p>Is my OT becoming Rusty?</p>
+              </div>
+              <div class="track-item track3">
+                <h4>Del Delgiannoudis</h4>
+                <p>The Absolute State of Nvidia</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="time-block">
+          <span class="time">14:55 - 15:55</span>
+          <div class="event-content">
+            <div class="multi-track-container">
+              <div class="track-item track1">
+                <h4>Dónnan Mallon</h4>
+                <p>InfoStealerz - The Phantom Menace</p>
+              </div>
+              <div class="track-item track2">
+                <h4>Harry McLaren</h4>
+                <p>Modern Cybersecurity Operations: Responsibilities, Knowledge & Skills</p>
+              </div>
+              <div class="track-item track3">
+                <h4>Cameron Cottam</h4>
+                <p>CAPTCHA Clicked, System Compromised: Understanding the ClickFix Phishing Technique</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="time-block break-event">
+          <span class="time">15:55 - 16:15</span>
+          <div class="event-content">
+            <h4>Afternoon Refreshments</h4>
+          </div>
+        </div>
+        
+        <div class="time-block">
+          <span class="time">16:15 - 17:00</span>
+          <div class="event-content">
+            <div class="multi-track-container">
+              <div class="track-item track1">
+                <h4>Kirils Solovjovs</h4>
+                <p>A Big Bad App: Welcome to Corporatocracy</p>
+              </div>
+              <div class="track-item track2">
+                <h4>Thomas Xuan Meng</h4>
+                <p>The Evolution of Syscalls: A Winding Path to Untraceable Execution</p>
+              </div>
+              <div class="track-item track3">
+                <h4>Kat Fitzgerald</h4>
+                <p>Confound and Delay: Honeypot Chronicles from the Digital Battlefield</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="time-block keynote-event">
+          <span class="time">17:00 - 17:45</span>
+          <div class="event-content">
+            <h4>Closing Keynote - Track 2</h4>
+            <p>Cary Hendricks, ID Cyber Solutions</p>
+          </div>
+        </div>
+        
+        <div class="time-block common-event">
+          <span class="time">17:45 - 18:00</span>
+          <div class="event-content">
+            <h4>Closing Remarks</h4>
+          </div>
+        </div>
       </div>
-      <div class="schedule-track">
-        <h4>Track 1</h4>
-        <ul>
-          <li>Details Coming Soon!</li>
-        </ul>
+    </div>
+
+    <!-- Track 1 Schedule -->
+    <div id="track1" class="schedule-tab-content">
+      <h3>Track 1 - Lindsay Stewart Lecture Theatre</h3>
+      <div class="track-schedule">
+        <div class="talk-item">
+          <div class="talk-time">10:45 - 11:15</div>
+          <div class="talk-details">
+            <h4>Health, IoT, Robotics & Digital Evidence</h4>
+            <p class="speaker">Adrian Smales</p>
+            <div class="talk-description">
+              <p>Pacemakers, insulin pumps and autonomous gadgets now chat over 5G, but every heartbeat they broadcast is an open invitation to hackers. The warning is clear: when code meets flesh, failures aren't blue screens—they're funerals. Regulators finally demand cybersecurity, yet current standards ignore digital evidence.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="talk-item">
+          <div class="talk-time">11:20 - 12:20</div>
+          <div class="talk-details">
+            <h4>Ransomware Diaries: Hackers, Hostages and the Price of Panic</h4>
+            <p class="speaker">Michael Varley</p>
+            <div class="talk-description">
+              <p>Step into the high-stakes world of ransomware incidents, where companies face impossible choices and criminals sometimes show unexpected mercy. Through real-world case studies, we'll unravel how attackers break in, how they steal data, how they cripple organisations and what happens when victims negotiate.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="talk-item">
+          <div class="talk-time">14:20 - 14:50</div>
+          <div class="talk-details">
+            <h4>Cyber War Chronicles: My Path to Becoming a DFIR Consultant</h4>
+            <p class="speaker">David Brown</p>
+            <div class="talk-description">
+              <p>Navigating your way through life can be a challenge. Having done Computer Science at Uni in the very early 00's then joining the Police I now find myself as a Principal DFIR Consultant for one of the world's leading Cyber companies.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="talk-item">
+          <div class="talk-time">14:55 - 15:55</div>
+          <div class="talk-details">
+            <h4>InfoStealerz - The Phantom Menace</h4>
+            <p class="speaker">Dónnan Mallon</p>
+            <div class="talk-description">
+              <p>Welcome to the wacky world of Information Stealers! They come in all shapes and sizes. We'll be discussing the rise and impact these infostealers have had globally throughout various industries and how some have met their downfall through Law Enforcement.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="talk-item">
+          <div class="talk-time">16:15 - 17:00</div>
+          <div class="talk-details">
+            <h4>A Big Bad App: Welcome to Corporatocracy</h4>
+            <p class="speaker">Kirils Solovjovs</p>
+            <div class="talk-description">
+              <p>We live in a world where corporations decide how we interact with digital systems, and they are not on our side. If something goes wrong and you're not the 1,000th person to report it, it's your problem. Customer service? That's just a chatbot pretending to care.</p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="schedule-track">
-        <h4>Track 2</h4>
-        <ul>
-          <li>Details Coming Soon!</li>
-        </ul>
+    </div>
+
+    <!-- Track 2 Schedule -->
+    <div id="track2" class="schedule-tab-content">
+      <h3>Track 2 - Riady Lecture Theatre</h3>
+      <div class="track-schedule">
+        <div class="talk-item">
+          <div class="talk-time">09:30 - 10:00</div>
+          <div class="talk-details">
+            <h4>Opening Remarks</h4>
+          </div>
+        </div>
+        
+        <div class="talk-item keynote">
+          <div class="talk-time">10:00 - 10:45</div>
+          <div class="talk-details">
+            <h4>Opening Keynote</h4>
+            <p class="speaker">Bill Buchanan, Edinburgh Napier University</p>
+          </div>
+        </div>
+        
+        <div class="talk-item">
+          <div class="talk-time">10:45 - 11:15</div>
+          <div class="talk-details">
+            <h4>Le Tour de Hack: What has changed in cyber disruption in 10 years and what skills do you need to be successful now?</h4>
+            <p class="speaker">James Kwaan</p>
+            <div class="talk-description">
+              <p>In the last 10 years there have been significant changes, I will cover the key factors affecting the threat landscape to help us understand who is likely to attack us and why? I will explore the disruptive geopolitical context and current threats and trends and the new frontiers which cyber is now breaking into.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="talk-item">
+          <div class="talk-time">11:20 - 12:20</div>
+          <div class="talk-details">
+            <h4>Digital Evidence in the times of Artificial Intelligence. A glimpse into the future</h4>
+            <p class="speaker">Basil Manoussos</p>
+            <div class="talk-description">
+              <p>Digital Forensics and Digital Evidence have long been viewed as the "poor relation" of Cybersecurity—often overlooked by both academia and industry. However, the tide is turning. With the growing sophistication of cybercrime, these fields are gaining the attention they deserve.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="talk-item panel">
+          <div class="talk-time">13:30 - 14:15</div>
+          <div class="talk-details">
+            <h4>Panel Discussion: Neurodiversity in Cyber - Superpower vs. Kryptonite?</h4>
+            <p class="speaker">Sharon Moore, Sarah Williamson, Jonathan Marnoch, Ruby Richardson, Stephanie Golstov</p>
+          </div>
+        </div>
+        
+        <div class="talk-item">
+          <div class="talk-time">14:20 - 15:50</div>
+          <div class="talk-details">
+            <h4>Is my OT becoming Rusty?</h4>
+            <p class="speaker">Eliot Bolster</p>
+            <div class="talk-description">
+              <p>Could Rust be a viable option for coding our critical OT systems, adding another language to the IEC 61131-3 standard? Despite IT loving a trend it has always been harder for these trends to get adopted within industrial systems.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="talk-item">
+          <div class="talk-time">14:55 - 15:55</div>
+          <div class="talk-details">
+            <h4>Modern Cybersecurity Operations: Responsibilities, Knowledge & Skills</h4>
+            <p class="speaker">Harry McLaren</p>
+            <div class="talk-description">
+              <p>Overview of why cyber is an interesting place to work, what 'cybersecurity operations' is, the main focuses of the blue team (preparation, detection, response and recovery), adversary knowledge frameworks (ATT&CK), and finally an overview of important technical and behavioural skills needed in 2025 and beyond!</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="talk-item">
+          <div class="talk-time">16:15 - 17:00</div>
+          <div class="talk-details">
+            <h4>The Evolution of Syscalls: A Winding Path to Untraceable Execution</h4>
+            <p class="speaker">Thomas Xuan Meng</p>
+            <div class="talk-description">
+              <p>This presentation provides a step-by-step, technical exploration of the evolution of syscalls. It begins with the fundamental role of NT Windows APIs in executing syscalls within kernel space.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="talk-item keynote">
+          <div class="talk-time">17:00 - 17:45</div>
+          <div class="talk-details">
+            <h4>Closing Keynote</h4>
+            <p class="speaker">Cary Hendricks, ID Cyber Solutions</p>
+          </div>
+        </div>
+        
+        <div class="talk-item">
+          <div class="talk-time">17:45 - 18:00</div>
+          <div class="talk-details">
+            <h4>Closing Remarks</h4>
+          </div>
+        </div>
       </div>
-      <div class="schedule-track">
-        <h4>Track 3</h4>
-        <ul>
-          <li>Details Coming Soon!</li>
-        </ul>
+    </div>
+
+    <!-- Track 3 Schedule -->
+    <div id="track3" class="schedule-tab-content">
+      <h3>Track 3 - Room 1/10</h3>
+      <div class="track-schedule">
+        <div class="talk-item">
+          <div class="talk-time">10:45 - 11:30</div>
+          <div class="talk-details">
+            <h4>Burning the Candle at all Ends</h4>
+            <p class="speaker">Karen Taljard</p>
+            <div class="talk-description">
+              <p>Life sucks. Between the chaos of work life and personal life, it can be hard to make time for some R&R. Today we will discuss what you can do to better manage the chaos as well as activities you can do to unwind and disconnect from the world for a bit.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="talk-item">
+          <div class="talk-time">11:35 - 12:20</div>
+          <div class="talk-details">
+            <h4>Offensive Security isn't all Sunshine and Rainbows: War Stories from a Decade+ of FAFO</h4>
+            <p class="speaker">Andy Gill</p>
+            <div class="talk-description">
+              <p>Offensive security often gets romanticised—bypassing controls, breaking into networks, outsmarting defenders—but the reality is far messier. Over the last decade, red teamers and pentesters have faced everything from paranoid sysadmins and overzealous security teams to last-minute scope changes and real-world consequences that no one saw coming.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="talk-item">
+          <div class="talk-time">14:20 - 15:50</div>
+          <div class="talk-details">
+            <h4>The Absolute State of Nvidia</h4>
+            <p class="speaker">Del Delgiannoudis</p>
+            <div class="talk-description">
+              <p>Since 2018, Nvidia's consumer graphics division has been developing a severe case of we-don't-care-about-you-itis. As much as it's a well known fact that corporations are not our friends, for this talk I'd like to investigate the specific, targeted and arguably malicious ways in which Nvidia has gone out of their way to screw over their GeForce customers.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="talk-item">
+          <div class="talk-time">14:55 - 15:55</div>
+          <div class="talk-details">
+            <h4>From Verification to Infection: A Deep Dive into ClickFix Techniques and Fake CAPTCHA Exploits</h4>
+            <p class="speaker">Cameron Cottam</p>
+            <div class="talk-description">
+              <p>CAPTCHAs are widely used as a security measure to distinguish humans from bots. However, threat actors have been exploiting this tool into a technique known as ClickFix. By presenting fake "Verify You Are a Human" CAPTCHA pages, attackers aim to trick users into executing malicious PowerShell commands.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="talk-item">
+          <div class="talk-time">16:15 - 17:00</div>
+          <div class="talk-details">
+            <h4>Confound and Delay: Honeypot Chronicles from the Digital Battlefield</h4>
+            <p class="speaker">Kat Fitzgerald</p>
+            <div class="talk-description">
+              <p>Embark on a whirlwind tour of global cyber deception with a seasoned(?) security engineer who's been running honeypots in some of the world's most intriguing locales, including the bustling digital battleground of Ukraine.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Keynotes Section -->
+    <div id="keynotes" class="schedule-tab-content">
+      <h3>Keynote Speakers</h3>
+      <div class="keynote-speakers">
+        <div class="keynote-speaker">
+          <div class="keynote-time">Opening Keynote: 10:00-10:45</div>
+          <div class="keynote-details">
+            <h4>Bill Buchanan</h4>
+            <p class="affiliation">Edinburgh Napier University</p>
+            <p class="social-handle">@BilllAtNapier</p>
+            <p class="position">Professor at Edinburgh Napier University</p>
+            <div class="keynote-bio">
+              <p>Bill Buchanan is a Professor in the School of Computing at Edinburgh Napier University, a Fellow of the BCS and Principal Fellow of the HEA. He was appointed an Officer of the Order of the British Empire in 2017 and has won student-voted awards of teaching excellence in 2011, 2014, 2015, 2019, 2020 and 2023. He is also the creator of the Blockpass Identity Lab at Napier's Merchiston campus. He has published over 30 academic books and over 300 research papers.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="keynote-speaker">
+          <div class="keynote-time">Closing Keynote: 17:00-17:45</div>
+          <div class="keynote-details">
+            <h4>Cary Hendricks</h4>
+            <p class="affiliation">ID Cyber Solutions</p>
+            <p class="social-handle">@FigNJam</p>
+            <p class="position">Global Operations Director at ID Cyber Solutions</p>
+            <div class="keynote-bio">
+              <p>Bill Buchanan is a Professor in the School of Computing at Edinburgh Napier University, a Fellow of the BCS and Principal Fellow of the HEA. He was appointed an Officer of the Order of the British Empire in 2017 and has won student-voted awards of teaching excellence in 2011, 2014, 2015, 2019, 2020 and 2023. He is also the creator of the Blockpass Identity Lab at Napier's Merchiston campus. He has published over 30 academic books and over 300 research papers.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <h3>Panel Discussion: Neurodiversity in Cyber - Superpower vs. Kryptonite?</h3>
+      <div class="panel-info">
+        <p>We're so glad to be bringing back the Panel event again this year, as it has been very well received over the years it has ran; always bringing insightful questions and industry experience to the forefront. This year, we believe the panel topic of 'Neurodiversity in Cyber: Superpower vs. Kryptonite' is more relevant than ever, especially as neurodivergent individuals become recognised within the industry.</p>
+        
+        <blockquote>"About 15% to 20% of the world's population shows signs of neurodivergence" - Northwestern Medicine, 2025</blockquote>
+        
+        <p>In an industry that thrives on unconventional thinking, this is not just a statistic. It's a reminder of the incredible diversity of minds shaping cybersecurity. Whether you personally identify as neurodivergent or not, these conversations impact all of us. From recruitment and workplace culture to problem-solving approaches, understanding and embracing neurodiversity makes our community stronger.</p>
+        
+        <p>So make sure to come along to hear what our brilliant panelists have to say, challenge your assumptions, and ask your questions - this space is for you too!</p>
+        
+        <div class="panelists">
+          <div class="panelist">
+            <h4>Sharon Moore</h4>
+          </div>
+          <div class="panelist">
+            <h4>Sarah Williamson</h4>
+            <p>Sarah is a Social Work Operational Manager for mental health services in Renfrewshire. A social worker since 2011, Sarah has specialised in mental health since 2016. An accredited trainer in suicide intervention through LivingWorks, Sarah has been in management positions for 5 years and works with a diverse range of staff including those who need additional support or adapted working arrangements to reach their full potential at work.</p>
+          </div>
+          <div class="panelist">
+            <h4>Jonathan Marnoch</h4>
+            <p>A season IT professional with 25 years of experience. Jonathan (Jonty) Marnoch has worked with some of the largest companies in the UK and globally. Currently Principle Cyber Security Architect at JLR their expertise spans various sectors, including Defence, Banking, Utilities, Retail and currently automotive.</p>
+          </div>
+          <div class="panelist">
+            <h4>Ruby Richardson</h4>
+            <p>Ruby is a 4th year BEng student in Cybersecurity and Forensics at Edinburgh Napier University. During her third year, she completed a year long industrial placement at Gymshark, where she gained hands on experience across a range of cybersecurity roles. Diagnosed with dyslexia in primary school, Ruby has had to continually adapt to overcome challenges, both academically and professionally.</p>
+          </div>
+          <div class="panelist">
+            <h4>Stephanie Golstov</h4>
+            <p>Steph is a creative and strategic consultant specialising in digital transformation. She co-founded the digital consultancy Osta Labs Ltd which, for the past seven years has supported clients with digital strategy, machine learning and AI-readiness. Steph is proudly and (mostly) comfortably neurodivergent and has a particular interest in how technology can support inclusive and exciting workplaces of the future.</p>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -211,7 +645,6 @@
       <div class="schedule-track ctf-event">
         <h4>CTF Event</h4>
         <ul>
-<!--          <li><strong>From 8:30 AM:</strong> Helpers Setup</li>-->
           <li><strong>9:00 AM:</strong> Players Arrive</li>
           <li><strong>09:30 AM:</strong> CTF Starts</li>
           <li><strong>1:00 PM:</strong> Lunch</li>
@@ -222,14 +655,14 @@
     </div>
   </section>
 
-  <section id="speakers" class="container">
+  <!-- <section id="speakers" class="container">
     <h2>Speakers</h2>
     <p>Meet the brilliant minds speaking at Le Tour Du Hack 2025...</p>
     <br>
     <div class="speaker-grid">
-      <div class="speaker-card" onclick="openModal('modal-speaker-1')">
+      <div class="speaker-card" onclick="openModal('modal-speaker-1')"> -->
 <!--        <img src="https://via.placeholder.com/200x200.png?text=Speaker+Photo" alt="Speaker Photo">-->
-        <h3>Speaker Information Coming Soon</h3>
+        <!-- <h3>Speaker Information Coming Soon</h3>
         <p>Check back soon, and keep an eye on our socials.</p>
       </div>
 
@@ -242,11 +675,13 @@
         <p><strong>Time Slot:</strong> All day, every day</p>
         <p>
           This modal will be used when the speakers have been announced. :')
-          ltdh{o0oh_super_s3cret}
+          hm vanished.
         </p>
       </div>
     </div>
-  </section>
+  </section> -->
+
+  
 <section id="venue" class="container">
   <h2>Venue</h2>
   <p><strong>Location:</strong> Edinburgh Napier University, Craiglockhart Campus</p>
