@@ -273,7 +273,7 @@ section h2 {
 }
 
 .schedule-tab-btn[onclick*="track3"] {
-  border-bottom: 3px solid #FFBB00;
+  border-bottom: 3px solid #2E8B57;
 }
 
 .schedule-tab-btn[onclick*="keynotes"] {
@@ -364,8 +364,8 @@ section h2 {
 }
 
 .track3 {
-  background-color: rgba(255, 187, 0, 0.1);
-  border-left: 3px solid #FFBB00;
+  background-color: rgba(46, 139, 87, 0.1);
+  border-left: 3px solid #2E8B57;
 }
 
 .common-event {
@@ -456,7 +456,7 @@ section h2 {
   background-color: #242424;
   border-radius: 4px;
   padding: 1.5rem;
-  border-left: 3px solid #FFBB00;
+  border-left: 3px solid #2E8B57;
 }
 
 .keynote-time {
@@ -1201,8 +1201,8 @@ main {
 }
 
 .ctf-essentials {
-  background-color: rgba(255, 187, 0, 0.1);
-  border-left: 3px solid #FFBB00;
+  background-color: rgba(46, 139, 87, 0.1);
+  border-left: 3px solid #2E8B57;
   padding: 1rem 1.5rem;
   border-radius: 6px;
   margin-top: 1.5rem;
