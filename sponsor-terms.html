@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Le Tour Du Hack</title>
+
+  <!-- Fonts & Tailwind -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ["Inter"] },
+          colors: { brand: { primary: "#50A8B7", dark: "#2A4245", light: "#7FC9D3" } },
+          boxShadow: { soft: "0 10px 30px rgba(0,0,0,.08)" }
+        }
+      }
+    };
+  </script>
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <style>
+    .countdown-glow { position: relative; border: none !important; }
+    .countdown-glow::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 16px;
+      pointer-events: none;
+      padding: 3px;
+      background: conic-gradient(from var(--sweep-angle, 0deg), transparent, rgba(127, 201, 211, 0.55), transparent);
+      -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+      mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+    }
+  </style>
+</head>
+<body class="bg-[#1A2527] text-white">
+
+  <!-- HEADER -->
+  <header class="sticky top-0 z-50 bg-[#2A4245]/80 backdrop-blur border-b border-[#3A565A]">
+    <div class="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between">
+      <a href="#top"><img id="site-logo" src="./assets/logos/LTDH Logo Blank _White.png" class="h-12" alt="Le Tour Du Hack logo" /></a>
+      <nav class="hidden md:flex gap-6 text-sm font-semibold text-[#D9E6E8]">
+        <a href="#vision">Vision</a>
+        <a href="#programme">Programme</a>
+        <a href="#cfp">Call For Speakers</a>
+        <a href="#sponsors">Sponsors</a>
+      </nav>
+    </div>
+  </header>
+
+ <section class="py-20 bg-[#2A4245] text-center">
+<h1 class="text-5xl font-black">Terms & Conditions</h1>
+<p class="mt-4 text-lg text-[#D9E6E8] max-w-3xl mx-auto">These Terms and Conditions apply to all sponsors engaging with Le Tour Du Hack 2026, organised by the Le Tour Du Hack and ENUSEC teams.</p>
+</section>
+
+
+<section class="py-16 bg-[#23363A]">
+<div class="max-w-5xl mx-auto px-6 space-y-10 text-[#D9E6E8] leading-relaxed">
+
+
+<h2 class="text-3xl font-bold text-white">1. Introduction</h2>
+<p>These Terms and Conditions (“Terms”) apply to all sponsors (“the Sponsor”, “you”) engaging with Le Tour Du Hack 2026 (“the Event”), organised by the Le Tour Du Hack team and the ENUSEC team (“the Organiser”). By submitting a sponsorship form or agreement, you acknowledge that you have read, understood, and agree to be bound by these Terms.</p>
+
+
+<h2 class="text-3xl font-bold text-white">2. Terms of Payment</h2>
+<ul class="list-disc pl-6 space-y-2">
+<li>Payments must be made through bank transfer, with details found via invoice provided to the Sponsor by the Organiser.</li>
+<li>Sponsorship payment must then be made within 14 days of the invoice being received; exceptions must be approved by the Organiser and noted in writing.</li>
+<li>Late payment may result in sponsorship privileges being revoked and given to another organisation where possible, with fair notice provided.</li>
+<li>The Organiser reserves the right to deny any sponsorship they deem unsuitable for Le Tour Du Hack 2026 and holds sole authority to determine what is unsuitable.</li>
+<li>By sponsoring Le Tour Du Hack 2026, you agree that money paid for the sponsorship is non-refundable unless the event is cancelled.</li>
+<li>Proof of third-party liability insurance for business costs associated with the conference must be supplied. Failure to include this may result in ENUSEC withdrawing the booking.</li>
+</ul>
+
+
+<h2 class="text-3xl font-bold text-white">3. Use of Branding in ENUSEC Media</h2>
+<p>By sponsoring Le Tour Du Hack, you agree to the use of your company name and logo in any and all promotional materials produced by the Organiser for use in advertisement and promotion of Le Tour Du Hack, including official event media.</p>
+
+
+<h2 class="text-3xl font-bold text-white">4. Booths</h2>
+<ul class="list-disc pl-6 space-y-2">
+<li>Sponsors with Platinum or Gold packages will be allocated booth space at the event venue.</li>
+<li>Booths must be staffed by delegates attending using the complimentary tickets provided; additional delegates must purchase extra tickets.</li>
+<li>Once the venue is confirmed, booth dimensions will be provided. Sponsors bringing their own booth structures are responsible for assembly and disassembly, and must disclose booth specifics in advance.</li>
+<li>If required, booths will be provided with tables and chairs proportional to the sponsorship package.</li>
+<li>Distribution of resources is only permitted at your designated sponsor booth and must relate specifically to your organisation.</li>
+<li>Any payment transactions at sponsor stalls are strictly forbidden.</li>
+<li>The Organiser retains the right to veto any goods deemed offensive.</li>
+<li>All booth resources must be cleared by the end of the disassembly period; leftover items are not the Organiser’s responsibility.</li>
+<li>Failure to comply with these Terms may result in immediate expulsion without refund.</li>
+</ul>
+
+
+<h2 class="text-3xl font-bold text-white">5. Cancellation and Postponement</h2>
+<ul class="list-disc pl-6 space-y-2">
+<li>If the Event is postponed, all activities will be rescheduled, and sponsorship fees will automatically apply to the new date.</li>
+<li>If the Event is cancelled and cannot be rescheduled, sponsors will be informed promptly. Refunds may be considered depending on circumstances and at the Organiser’s discretion.</li>
+</ul>
+
+
+<h2 class="text-3xl font-bold text-white">6. GDPR</h2>
+<p>By completing and submitting any sponsorship-related document for Le Tour Du Hack 2026, you consent to the collection and processing of your personal data by the Organiser in accordance with the UK GDPR and the Data Protection Act 2018.</p>
+<ul class="list-disc pl-6 space-y-2">
+<li>Your personal information will be used solely for sponsorship administration, event coordination, and relevant communications.</li>
+<li>Data will be retained only as long as necessary to fulfil these purposes and legal obligations.</li>
+<li>You may request access, correction, restriction, or deletion of your personal data at any time.</li>
+<li>For questions or rights-related requests, contact <a href="mailto:team@enusec.org" class="text-brand-primary underline">team@enusec.org</a>.</li>
+</ul>
+
+
+<h2 class="text-3xl font-bold text-white">7. Conduct and Expulsion</h2>
+<ul class="list-disc pl-6 space-y-2">
+<li>All sponsors and representatives must uphold the values of Le Tour Du Hack 2026 and comply with all event terms and policies.</li>
+<li>Failure to comply may result in expulsion without refund.</li>
+<li>The Organising Team will strive to resolve issues fairly; expulsion will only occur after careful review.</li>
+<li>Only authorised members of the Le Tour Du Hack team may enforce expulsion.</li>
+<li>Open and respectful communication is encouraged, and efforts will be made to resolve concerns before formal action is taken.</li>
+</ul>
+
+
+</div>
+</section>
+  <!-- FOOTER -->
+  <footer class="bg-[#1A2527] text-[#D9E6E8] py-12">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6">
+      <div class="grid md:grid-cols-3 gap-8">
+        <div>
+          <div class="font-black text-white">Le Tour Du Hack</div>
+          <p class="mt-4 text-sm">An ENUSEC event</p>
+        </div>
+        <div>
+          <div class="font-semibold">Contact</div>
+          <ul class="mt-3 space-y-2 text-sm">
+            <li><a class="hover:underline" href="mailto:team@enusec.org">team@enusec.org</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-10 text-xs text-slate-500">© <span id="year"></span> ENUSEC&gt;_ All rights reserved.</div>
+    </div>
+  </footer>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const eventStart = new Date('2026-05-16T09:00:00');
+    const eventEnd   = new Date('2026-05-18T00:00:00');
+    const cfpOpens       = new Date('2026-02-01T09:00:00');
+    const ticketsRelease = new Date('2026-01-10T10:00:00');
+
+    function updateMainCountdown() {
+      const el = document.getElementById('countdown-text');
+      if (!el) return;
+      const now = new Date();
+      if (now < eventStart) {
+        const diff  = eventStart - now;
+        const days  = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const mins  = Math.floor((diff / (1000 * 60)) % 60);
+        const secs  = Math.floor((diff / 1000) % 60);
+        el.textContent = `Event starts in ${days}d ${hours}h ${mins}m ${secs}s`;
+      } else if (now >= eventStart && now <= eventEnd) {
+        el.textContent = '🔴 LIVE NOW — Welcome to Le Tour Du Hack!';
+      } else {
+        el.textContent = '✔️ Le Tour Du Hack 2026 has ended — see you next year!';
+      }
+    }
+
+    function formatDiffFull(targetDate) {
+      const now = new Date();
+      if (now >= targetDate) return 'Started';
+      const diff   = targetDate - now;
+      const days   = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours  = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const mins   = Math.floor((diff / (1000 * 60)) % 60);
+      const secs   = Math.floor((diff / 1000) % 60);
+      return `${days}d ${hours}h ${mins}m ${secs}s`;
+    }
+
+    function updateExtraTimers() {
+      const cfpEl     = document.getElementById('cfp-timer');
+      const ticketsEl = document.getElementById('tickets-timer');
+      if (cfpEl)     cfpEl.textContent     = formatDiffFull(cfpOpens);
+      if (ticketsEl) ticketsEl.textContent = formatDiffFull(ticketsRelease);
+    }
+
+    let sweep = 0;
+    setInterval(() => {
+      sweep = (sweep + 2) % 360;
+      document.documentElement.style.setProperty('--sweep-angle', sweep + 'deg');
+    }, 60);
+
+    updateMainCountdown();
+    updateExtraTimers();
+    setInterval(updateMainCountdown, 1000);
+    setInterval(updateExtraTimers, 1000);
+
+    function makeLane(selector, speed) {
+      return new Swiper(selector, {
+        slidesPerView: 5,
+        spaceBetween: 20,
+        loop: true,
+        speed: speed,
+        autoplay: {
+          delay: 0,
+          disableOnInteraction: false,
+        },
+        grid: {
+          rows: 2,
+          fill: 'row'
+        },
+        freeMode: true,
+        freeModeMomentum: false,
+        allowTouchMove: false,
+      });
+    }
+
+    makeLane('.gold-swiper', 3000);
+    makeLane('.silver-swiper', 3000);
+    makeLane('.bronze-swiper', 3000);
+  </script>
+</body>
+</html>
