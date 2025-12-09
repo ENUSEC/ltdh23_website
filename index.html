@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Le Tour Du Hack</title>
+
+  <!-- Fonts & Tailwind -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ["Inter"] },
+          colors: { brand: { primary: "#50A8B7", dark: "#2A4245", light: "#7FC9D3" } },
+          boxShadow: { soft: "0 10px 30px rgba(0,0,0,.08)" }
+        }
+      }
+    };
+  </script>
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <style>
+    .countdown-glow { position: relative; border: none !important; }
+    .countdown-glow::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 16px;
+      pointer-events: none;
+      padding: 3px;
+      background: conic-gradient(from var(--sweep-angle, 0deg), transparent, rgba(127, 201, 211, 0.55), transparent);
+      -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+      mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+    }
+  </style>
+</head>
+<body class="bg-[#1A2527] text-white">
+
+  <!-- HEADER -->
+  <header class="sticky top-0 z-50 bg-[#2A4245]/80 backdrop-blur border-b border-[#3A565A]">
+    <div class="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between">
+      <a href="#top"><img id="site-logo" src="./assets/logos/LTDH Logo Blank _White.png" class="h-12" alt="Le Tour Du Hack logo" /></a>
+      <nav class="hidden md:flex gap-6 text-sm font-semibold text-[#D9E6E8]">
+        <a href="#vision">Vision</a>
+        <a href="#programme">Programme</a>
+        <a href="#cfp">Call For Speakers</a>
+        <a href="#sponsors">Sponsors</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="top" class="relative pt-28 pb-40 bg-[#2A4245] text-center">
+    <span class="inline-block text-xs tracking-[0.2em] uppercase font-semibold rounded-full px-4 py-1 ring-1 ring-brand-primary/60 bg-[#1A2527]/80">Le Tour Du Hack</span>
+    <h1 class="mt-6 text-5xl md:text-7xl font-black max-w-4xl mx-auto leading-tight">Le Tour Du Hack is <span class="text-brand-primary">Back</span> - And Bigger Than Ever.</h1>
+    <p class="mt-6 text-xl text-[#D9E6E8] max-w-2xl mx-auto">Two days of talks, workshops, hacking challenges and community.</p>
+
+    <!-- Main countdown -->
+    <div id="countdown" class="mt-10 flex justify-center">
+      <div class="countdown-glow bg-[#1A2527]/70 backdrop-blur px-6 py-3 rounded-2xl shadow-soft inline-block">
+        <p id="countdown-text" class="text-xl md:text-2xl font-black tracking-wide text-brand-light"></p>
+      </div>
+    </div>
+
+    <!-- Secondary timers 
+    <div id="extra-timers" class="flex flex-row justify-center gap-3 text-xs md:text-sm mt-2">
+      <div class="inline-flex items-center px-4 py-2 rounded-xl border border-brand-primary/60 bg-[#1A2527]/80 backdrop-blur text-[#D9E6E8]">
+        <span class="mr-1 text-brand-light font-semibold uppercase tracking-wide">CFP Opens:</span>
+        <span id="cfp-timer" class="font-semibold text-white"></span>
+      </div>
+      <div class="inline-flex items-center px-4 py-2 rounded-xl border border-brand-primary/60 bg-[#1A2527]/80 backdrop-blur text-[#D9E6E8]">
+        <span class="mr-1 text-brand-light font-semibold uppercase tracking-wide">Tickets:</span>
+        <span id="tickets-timer" class="font-semibold text-white"></span>
+      </div>
+    </div>
+-->
+    <!-- CTAs -->
+    <div class="mt-4 flex flex-wrap justify-center gap-4">
+      <a href="#about" class="px-8 py-4 rounded-xl font-semibold shadow-soft text-white bg-brand-primary text-lg">Find Out More</a>
+      <a href="#sponsors" class="px-8 py-4 rounded-xl font-semibold text-brand-primary border border-brand-primary bg-[#1A2527]/80 text-lg">Find Out About Sponsoring</a>
+    </div>
+  </section>
+
+  <!-- HERO FEATURE IMAGE -->
+  <section class="relative -mt-24 max-w-6xl mx-auto px-4">
+    <div class="rounded-3xl overflow-hidden shadow-soft">
+      <img src="./assets/images/25-crowd.jpg" class="w-full h-[480px] object-cover" />
+    </div>
+  </section>
+
+  <!-- VISION -->
+  <section id="vision" class="py-20 bg-[#2A4245] text-center">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-4xl font-black">What Is Le Tour Du Hack?</h2>
+      <p class="mt-6 text-[#D9E6E8] text-lg leading-relaxed">Once a meetup of 30 students, LTDH is now Scotland’s flagship student-led cyber security conference - with hundreds of attendees, world-class talks, hands-on workshops and our legendary CTF.</p>
+    </div>
+    <div class="mt-16 grid md:grid-cols-3 gap-6 max-w-6xl mx-auto px-4">
+      <div class="rounded-2xl overflow-hidden shadow-soft"><img src="./assets/images/25-ai.jpg" class="h-64 w-full object-cover" /></div>
+      <div class="rounded-2xl overflow-hidden shadow-soft md:translate-y-6"><img src="./assets/images/24-hall.jpeg" class="h-64 w-full object-cover" /></div>
+      <div class="rounded-2xl overflow-hidden shadow-soft"><img src="./assets/images/25-picks.jpg" class="h-64 w-full object-cover" /></div>
+    </div>
+  </section>
+
+  <!-- ABOUT THE EVENT -->
+  <section id="about" class="py-20 bg-[#23363A] text-center">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-4xl font-black text-white mb-12">About the Event</h2>
+      <div class="grid md:grid-cols-2 gap-8 text-left">
+        <div class="p-6 rounded-2xl bg-[#2A4245] border border-[#3A565A] shadow-soft">
+          <h4 class="text-xl font-bold text-white mb-3">What is LTDH?</h4>
+          <p class="text-[#D9E6E8] leading-relaxed">
+            LTDH returns on May 16–17, 2026, hosted by ENUSEC. It's two days of learning, hacking, breaking things on purpose,
+            fixing them again, and meeting people who love cyber as much as you do.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-[#2A4245] border border-[#3A565A] shadow-soft">
+          <h4 class="text-xl font-bold text-white mb-3">What to Expect</h4>
+          <p class="text-[#D9E6E8] leading-relaxed">
+            Talks that actually teach you something, workshops where you get hands-on, and our legendary Capture the Flag - a mix of caffeine,
+            chaos, and clever thinking.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-[#2A4245] border border-[#3A565A] shadow-soft">
+          <h4 class="text-xl font-bold text-white mb-3">The Atmosphere</h4>
+          <p class="text-[#D9E6E8] leading-relaxed">
+            The real magic is the vibe - spontaneous debugging huddles, "wait I think I found something" moments, hallway chats, and meeting
+            people who get why you love this stuff.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-[#2A4245] border border-[#3A565A] shadow-soft">
+          <h4 class="text-xl font-bold text-white mb-3">Why Sponsor?</h4>
+          <p class="text-[#D9E6E8] leading-relaxed">
+            Help power Scotland’s next generation of cyber talent. Sponsoring LTDH means supporting a community built on curiosity,
+            collaboration, and a little bit of hacker chaos.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- FUN EXTRA INFO -->
+    <div class="mt-20 max-w-5xl mx-auto px-6">
+      <h3 class="text-3xl font-black text-brand-light">What Makes LTDH Special?</h3>
+      <div class="mt-10 grid md:grid-cols-3 gap-10 text-left">
+        <div class="p-6 rounded-2xl bg-[#2A4245] border border-[#3A565A] shadow-soft">
+          <h4 class="text-xl font-bold text-white">🧠 Learn New Skills</h4>
+          <p class="mt-3 text-[#D9E6E8]">From intro talks to deep-dive workshops, there’s something for every level - whether you're brand new or battle-hardened.</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-[#2A4245] border border-[#3A565A] shadow-soft">
+          <h4 class="text-xl font-bold text-white">🏆 A Legendary CTF</h4>
+          <p class="mt-3 text-[#D9E6E8]">Our CTF is iconic - puzzles, challenges, mayhem, and the shared chaos of trying to beat the scoreboard before midnight.</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-[#2A4245] border border-[#3A565A] shadow-soft">
+          <h4 class="text-xl font-bold text-white">🤝 Community & Vibes</h4>
+          <p class="mt-3 text-[#D9E6E8]">Meet hackers, students, researchers, professionals, and friends-to-be. LTDH is known for its warm, welcoming atmosphere.</p>
+        </div>
+      </div>
+
+      <div class="mt-16 p-8 rounded-3xl bg-[#2A4245] border border-brand-primary/30 shadow-soft text-center">
+        <h4 class="text-2xl font-bold text-white">Why People Love LTDH ❤️</h4>
+        <p class="mt-4 text-[#D9E6E8] max-w-3xl mx-auto">
+          It’s a weekend packed with energy - laptops out, ideas flowing, last-minute fixes, high-fives, and plenty of caffeine.
+          Whether you're cracking challenges, sharing stories, or discovering new paths in cybersecurity, you’ll leave inspired
+          (and probably a bit sleep-deprived).
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRAMME -->
+  <section id="programme" class="py-20 bg-[#23363A]">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-4xl font-black">Programme</h2>
+      <p class="mt-3 text-brand-light font-semibold uppercase tracking-wide">Full schedule coming soon</p>
+      <p class="mt-4 text-lg text-[#D9E6E8] max-w-3xl">Two days of hacking, collaboration, inspiration and community.</p>
+    </div>
+
+    <div class="mt-12 grid md:grid-cols-2 gap-10 max-w-6xl mx-auto px-4">
+      <div class="p-8 rounded-3xl bg-[#2A4245] border border-[#3A565A] shadow-soft">
+        <h3 class="text-3xl font-black text-white">Day 1 - Conference Day</h3>
+        <p class="mt-4 text-[#D9E6E8] leading-relaxed">The first day is all about ideas, energy, and community.</p>
+        <ul class="mt-4 space-y-2 text-[#D9E6E8]">
+          <li>- Talks that spark curiosity</li>
+          <li>- Workshops that build real skills</li>
+          <li>- Networking that opens doors</li>
+        </ul>
+        <p class="mt-4 text-[#D9E6E8] leading-relaxed">
+          Attendees meet industry leaders, discover new tools, and connect with Scotland’s growing cyber community. It’s the
+          perfect space for your brand to stand out, be seen, and make an impact.
+        </p>
+        <p class="mt-4 text-[#D9E6E8] leading-relaxed font-semibold">
+          After the day wraps up? It’s Afterparty time - where sponsors, speakers, students and industry professionals get to
+          relax and enjoy the evening.
+        </p>
+      </div>
+
+      <div class="p-8 rounded-3xl bg-[#2A4245] border border-[#3A565A] shadow-soft">
+        <h3 class="text-3xl font-black text-white">Day 2 - Capture The Flag Day</h3>
+        <p class="mt-4 text-[#D9E6E8] leading-relaxed">
+          A full-day CTF where competitors race to solve challenges, climb the leaderboard, and push their skills to the limit.
+        </p>
+        <p class="mt-4 text-[#D9E6E8] leading-relaxed">
+          It’s fast, fun, and unforgettable - and your name is right there alongside the action.
+        </p>
+        <p class="mt-4 text-[#D9E6E8] leading-relaxed font-semibold">
+          We end the event with awards and a celebration of the achievements of the day.
+        </p>
+      </div>
+    </div>
+
+    <div class="mt-20 grid md:grid-cols-2 gap-12 max-w-6xl mx-auto px-4 items-center">
+      <div class="rounded-3xl overflow-hidden shadow-soft">
+        <img src="./assets/images/24-hall.jpeg" class="w-full h-[360px] object-cover" />
+      </div>
+      <div>
+        <h3 class="text-3xl font-black">Talks, Workshops & Live Demos</h3>
+        <p class="mt-4 text-[#D9E6E8] text-lg leading-relaxed">
+          Day 1 features tracks packed with speakers from industry, academia and the hacker community. Expect practical talks,
+          live demos, and sessions that leave you with something new to try the minute you get home.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPONSORS -->
+<section id="sponsors" class="py-20 bg-[#23363A] text-center">
+  <h2 class="text-4xl font-black text-white">Sponsors & Partners</h2>
+  <p class="mt-3 text-brand-light uppercase tracking-wide">Coming Soon</p>
+
+  <div class="mt-16 flex flex-col items-center gap-10">
+
+    <!-- PLATINUM (top of pyramid, biggest) -->
+    <div class="flex justify-center">
+      <div class="h-28 w-56 rounded-2xl bg-[#2A4245] border-4 border-[#E5E4E2] shadow-soft"></div>
+    </div>
+
+    <!-- GOLD ROW (medium-large) -->
+    <div class="flex justify-center gap-6">
+      <div class="h-20 w-40 rounded-xl bg-[#2A4245] border-4 border-[#D4AF37]"></div>
+      <div class="h-20 w-40 rounded-xl bg-[#2A4245] border-4 border-[#D4AF37]"></div>
+    </div>
+
+    <!-- SILVER ROW (medium) -->
+    <div class="flex justify-center gap-6">
+      <div class="h-16 w-32 rounded-xl bg-[#2A4245] border-4 border-[#C0C0C0]"></div>
+      <div class="h-16 w-32 rounded-xl bg-[#2A4245] border-4 border-[#C0C0C0]"></div>
+      <div class="h-16 w-32 rounded-xl bg-[#2A4245] border-4 border-[#C0C0C0]"></div>
+    </div>
+
+    <!-- BRONZE ROW (smallest) -->
+    <div class="flex justify-center gap-4">
+      <div class="h-14 w-28 rounded-xl bg-[#2A4245] border-4 border-[#CD7F32]"></div>
+      <div class="h-14 w-28 rounded-xl bg-[#2A4245] border-4 border-[#CD7F32]"></div>
+      <div class="h-14 w-28 rounded-xl bg-[#2A4245] border-4 border-[#CD7F32]"></div>
+      <div class="h-14 w-28 rounded-xl bg-[#2A4245] border-4 border-[#CD7F32]"></div>
+    </div>
+
+  </div>
+
+  <a href="./assets/pdfs/SponsorPack-LeTourDuHack26.pdf" class="inline-block mt-12 px-8 py-4 rounded-xl font-semibold text-brand-primary border border-brand-primary bg-[#1A2527]/80 shadow-soft text-lg hover:bg-brand-primary hover:text-white transition">Could this be you?</a>
+</section>
+</section>
+
+<!-- CFP -->
+  <section id="cfp" class="py-20 bg-[#2A4245] text-center">
+    <div class="mx-auto max-w-5xl px-4">
+      <h2 class="text-4xl font-black tracking-tight text-white">Call For Speakers</h2>
+      <p class="mt-2 text-brand-light font-semibold uppercase tracking-wide">Opening Soon...</p>
+      <p class="mt-4 text-lg text-[#D9E6E8] max-w-2xl mx-auto">Speak at Le Tour Du Hack. We welcome talks from students, professionals, researchers, educators, and hackers of all backgrounds.</p>
+      <div class="mt-10 p-8 border border-[#3A565A] rounded-3xl bg-[#23363A] shadow-soft">
+        <h3 class="text-xl font-bold text-white">Opening Soon</h3>
+        <p class="mt-3 text-[#D9E6E8]">Talk categories include: technical research, hacker stories, blue team ops, cyber careers, demos, workshops, and more.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#1A2527] text-[#D9E6E8] py-12">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6">
+      <div class="grid md:grid-cols-3 gap-8">
+        <div>
+          <div class="font-black text-white">Le Tour Du Hack</div>
+          <p class="mt-4 text-sm">An ENUSEC event</p>
+        </div>
+        <div>
+          <div class="font-semibold">Contact</div>
+          <ul class="mt-3 space-y-2 text-sm">
+            <li><a class="hover:underline" href="mailto:team@enusec.org">team@enusec.org</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-10 text-xs text-slate-500">© <span id="year"></span> ENUSEC&gt;_ All rights reserved.</div>
+    </div>
+  </footer>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const eventStart = new Date('2026-05-16T09:00:00');
+    const eventEnd   = new Date('2026-05-18T00:00:00');
+    const cfpOpens       = new Date('2026-02-01T09:00:00');
+    const ticketsRelease = new Date('2026-01-10T10:00:00');
+
+    function updateMainCountdown() {
+      const el = document.getElementById('countdown-text');
+      if (!el) return;
+      const now = new Date();
+      if (now < eventStart) {
+        const diff  = eventStart - now;
+        const days  = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const mins  = Math.floor((diff / (1000 * 60)) % 60);
+        const secs  = Math.floor((diff / 1000) % 60);
+        el.textContent = `Event starts in ${days}d ${hours}h ${mins}m ${secs}s`;
+      } else if (now >= eventStart && now <= eventEnd) {
+        el.textContent = '🔴 LIVE NOW — Welcome to Le Tour Du Hack!';
+      } else {
+        el.textContent = '✔️ Le Tour Du Hack 2026 has ended — see you next year!';
+      }
+    }
+
+    function formatDiffFull(targetDate) {
+      const now = new Date();
+      if (now >= targetDate) return 'Started';
+      const diff   = targetDate - now;
+      const days   = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours  = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const mins   = Math.floor((diff / (1000 * 60)) % 60);
+      const secs   = Math.floor((diff / 1000) % 60);
+      return `${days}d ${hours}h ${mins}m ${secs}s`;
+    }
+
+    function updateExtraTimers() {
+      const cfpEl     = document.getElementById('cfp-timer');
+      const ticketsEl = document.getElementById('tickets-timer');
+      if (cfpEl)     cfpEl.textContent     = formatDiffFull(cfpOpens);
+      if (ticketsEl) ticketsEl.textContent = formatDiffFull(ticketsRelease);
+    }
+
+    let sweep = 0;
+    setInterval(() => {
+      sweep = (sweep + 2) % 360;
+      document.documentElement.style.setProperty('--sweep-angle', sweep + 'deg');
+    }, 60);
+
+    updateMainCountdown();
+    updateExtraTimers();
+    setInterval(updateMainCountdown, 1000);
+    setInterval(updateExtraTimers, 1000);
+
+    function makeLane(selector, speed) {
+      return new Swiper(selector, {
+        slidesPerView: 5,
+        spaceBetween: 20,
+        loop: true,
+        speed: speed,
+        autoplay: {
+          delay: 0,
+          disableOnInteraction: false,
+        },
+        grid: {
+          rows: 2,
+          fill: 'row'
+        },
+        freeMode: true,
+        freeModeMomentum: false,
+        allowTouchMove: false,
+      });
+    }
+
+    makeLane('.gold-swiper', 3000);
+    makeLane('.silver-swiper', 3000);
+    makeLane('.bronze-swiper', 3000);
+  </script>
+</body>
+</html>
