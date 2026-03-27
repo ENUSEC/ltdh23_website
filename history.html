@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Le Tour Du Hack - Through the Years</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ["Inter"] },
+          colors: {
+            brand: {
+              primary: "#50A8B7",
+              dark: "#2A4245",
+              light: "#7FC9D3"
+            }
+          },
+          boxShadow: {
+            soft: "0 10px 30px rgba(0,0,0,.08)"
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    .timeline {
+      position: relative;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 1rem;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(
+        to bottom,
+        rgba(127, 201, 211, 0.15),
+        rgba(127, 201, 211, 0.85),
+        rgba(127, 201, 211, 0.15)
+      );
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-left: 3.5rem;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: 0.35rem;
+      top: 0.25rem;
+      width: 1.35rem;
+      height: 1.35rem;
+      border-radius: 9999px;
+      background: #50A8B7;
+      border: 4px solid #1A2527;
+      box-shadow: 0 0 0 2px rgba(127, 201, 211, 0.35);
+    }
+  </style>
+</head>
+<body class="bg-[#1A2527] text-white">
+
+  <!-- HEADER -->
+  <header class="sticky top-0 z-50 bg-[#2A4245]/80 backdrop-blur border-b border-[#3A565A]">
+    <div class="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between">
+      <a href="./index.html">
+        <img src="./assets/logos/LTDH Logo Blank _White.png" class="h-12" alt="Le Tour Du Hack logo" />
+      </a>
+      <nav class="hidden md:flex gap-6 text-sm font-semibold text-[#D9E6E8]">
+        <a href="./index.html">Home</a>
+        <a href="#">Previous Years</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="relative pt-28 pb-28 bg-[#2A4245] text-center overflow-hidden">
+    <div class="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_top,rgba(127,201,211,0.25),transparent_45%)]"></div>
+    <div class="relative max-w-5xl mx-auto px-4">
+      <span class="inline-block text-xs tracking-[0.2em] uppercase font-semibold rounded-full px-4 py-1 ring-1 ring-brand-primary/60 bg-[#1A2527]/80">
+        Le Tour Du Hack Archive
+      </span>
+
+      <h1 class="mt-6 text-5xl md:text-7xl font-black leading-tight">
+        Through the <span class="text-brand-primary">Years</span>
+      </h1>
+
+      <p class="mt-6 text-xl text-[#D9E6E8] max-w-3xl mx-auto">
+        The story of Le Tour Du Hack - from student-led ambition to a growing cyber security event
+        built around talks, challenges, community, and hacker energy.
+      </p>
+
+      <div class="mt-8 flex flex-wrap justify-center gap-4">
+        <a href="#year-2026" class="px-8 py-4 rounded-xl font-semibold shadow-soft text-white bg-brand-primary text-lg">
+          Start with 2026
+        </a>
+        <a href="./index.html" class="px-8 py-4 rounded-xl font-semibold text-brand-primary border border-brand-primary bg-[#1A2527]/80 text-lg">
+          Back to Main Page
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section id="timeline" class="py-20 bg-[#23363A]">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="max-w-3xl">
+        <h2 class="text-4xl font-black">Timeline</h2>
+        <p class="mt-4 text-lg text-[#D9E6E8]">
+          From humble beginnings to bigger and better than ever.
+        </p>
+      </div>
+
+      <div class="timeline mt-16 space-y-16">
+
+        <!-- 2026 -->
+        <article id="year-2026" class="timeline-item">
+          <div class="timeline-dot"></div>
+
+          <div class="rounded-3xl bg-[#2A4245] border border-brand-primary/30 shadow-soft overflow-hidden">
+            <div class="grid lg:grid-cols-2 gap-0">
+              <div class="p-8 md:p-10">
+                <span class="inline-block text-sm font-bold uppercase tracking-wide text-brand-light">2026</span>
+                <h3 class="mt-2 text-4xl md:text-5xl font-black">Come Join Us</h3>
+                <p class="mt-5 text-lg text-[#D9E6E8] leading-relaxed">
+                  Le Tour Du Hack returns on <strong>May 16 – 17, 2026</strong> for another two days of talks,
+                  workshops, hacking challenges, and community. Built by students and supported by a growing
+                  cyber community, 2026 is the next chapter in the story.
+                </p>
+                <p class="mt-4 text-[#D9E6E8] leading-relaxed">
+                  If 2025 was the milestone year that showed what LTDH could be, 2026 is the invitation to
+                  be part of what comes next...
+                </p>
+
+                <div class="mt-6 grid sm:grid-cols-2 gap-4">
+                  <div class="p-5 rounded-2xl bg-[#23363A] border border-[#3A565A]">
+                    <h4 class="font-bold text-white">Day 1</h4>
+                    <p class="mt-2 text-[#D9E6E8] text-sm">Talks, workshops, demos, networking, and community.</p>
+                  </div>
+                  <div class="p-5 rounded-2xl bg-[#23363A] border border-[#3A565A]">
+                    <h4 class="font-bold text-white">Day 2</h4>
+                    <p class="mt-2 text-[#D9E6E8] text-sm">Capture The Flag, competition energy, and celebrations.</p>
+                  </div>
+                </div>
+
+                <div class="mt-8 flex flex-wrap gap-4">
+                  <a href="./index.html" class="px-6 py-3 rounded-xl font-semibold bg-brand-primary text-white shadow-soft">
+                    View 2026 Info
+                  </a>
+                  <a href="#year-2025" class="px-6 py-3 rounded-xl font-semibold text-brand-primary border border-brand-primary bg-[#1A2527]/60">
+                    See 2025 Highlights
+                  </a>
+                </div>
+              </div>
+
+              <div class="min-h-[320px] lg:min-h-full border-l border-[#3A565A]">
+                <img src="./assets/images/25-hall.jpg" alt="Le Tour Du Hack 2026 stage shot" class="w-full h-full object-cover" />
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 2025 -->
+        <article id="year-2025" class="timeline-item">
+          <div class="timeline-dot"></div>
+
+          <div class="rounded-3xl bg-[#2A4245] border border-[#3A565A] shadow-soft p-8 md:p-10">
+            <span class="inline-block text-sm font-bold uppercase tracking-wide text-brand-light">2025</span>
+            <h3 class="mt-2 text-4xl md:text-5xl font-black">The 10th Anniversary Year</h3>
+
+            <p class="mt-5 text-lg text-[#D9E6E8] leading-relaxed">
+              Le Tour Du Hack 2025 was a landmark edition. It celebrated <strong>10 years of ENUSEC</strong>
+              and showed just how far the event had come - from student-led beginnings to a full, ambitious,
+              two-day cyber security event at <strong>Edinburgh Napier University’s Craiglockhart Campus</strong>.
+            </p>
+
+            <p class="mt-4 text-[#D9E6E8] leading-relaxed">
+              The programme brought together current students, alumni, industry professionals, and cyber security
+              enthusiasts for a full conference day with <strong>three parallel tracks</strong>, followed by a
+              dedicated <strong>Capture The Flag day</strong>. It had keynotes, panel discussion, technical deep-dives,
+              career stories, digital forensics, blue team content, hardware and OT topics, and the kind of hallway
+              conversations that make events like this memorable.
+            </p>
+
+            <div class="mt-8 grid md:grid-cols-4 gap-4">
+              <div class="p-5 rounded-2xl bg-[#23363A] border border-[#3A565A] text-center">
+                <div class="text-3xl font-black text-brand-light">10</div>
+                <p class="mt-2 text-sm text-[#D9E6E8]">Years of ENUSEC</p>
+              </div>
+              <div class="p-5 rounded-2xl bg-[#23363A] border border-[#3A565A] text-center">
+                <div class="text-3xl font-black text-brand-light">3</div>
+                <p class="mt-2 text-sm text-[#D9E6E8]">Conference tracks</p>
+              </div>
+              <div class="p-5 rounded-2xl bg-[#23363A] border border-[#3A565A] text-center">
+                <div class="text-3xl font-black text-brand-light">2</div>
+                <p class="mt-2 text-sm text-[#D9E6E8]">Days of programme</p>
+              </div>
+              <div class="p-5 rounded-2xl bg-[#23363A] border border-[#3A565A] text-center">
+                <div class="text-3xl font-black text-brand-light">1</div>
+                <p class="mt-2 text-sm text-[#D9E6E8]">Legendary CTF day</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 2025 PHOTOS -->
+        <article id="gallery-2025" class="timeline-item">
+          <div class="timeline-dot"></div>
+
+          <div class="rounded-3xl bg-[#2A4245] border border-[#3A565A] shadow-soft p-8 md:p-10">
+            <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
+              <div>
+                <span class="inline-block text-sm font-bold uppercase tracking-wide text-brand-light">2025 Gallery</span>
+                <h3 class="mt-2 text-3xl md:text-4xl font-black">Photos from the Milestone Year</h3>
+              </div>
+              <p class="text-[#D9E6E8] max-w-2xl">
+                Add real images here from talks, the crowd, the panel, the venue, the keynote speakers, and the CTF.
+              </p>
+            </div>
+
+            <div class="mt-8 grid md:grid-cols-3 gap-6">
+              <div class="rounded-3xl overflow-hidden border border-[#3A565A]">
+                <img src="./assets/images/25-stands.jpg" alt="Wide crowd shot from Le Tour Du Hack 2025" class="w-full h-72 object-cover" />
+              </div>
+              <div class="rounded-3xl overflow-hidden border border-[#3A565A] md:translate-y-6">
+                <img src="./assets/images/25-locknote.jpg" alt="Carry Hendricks on stage at Le Tour Du Hack 2025 delivering the Locknote" class="w-full h-72 object-cover" />
+              </div>
+              <div class="rounded-3xl overflow-hidden border border-[#3A565A]">
+                <img src="./assets/images/25-spot.jpg" alt="Spot the dog at Le Tour Du Hack 2025" class="w-full h-72 object-cover" />
+              </div>
+            </div>
+
+            <div class="mt-6 grid md:grid-cols-2 gap-6">
+              <div class="rounded-3xl overflow-hidden border border-[#3A565A]">
+                <img src="./assets/images/25-pannel.jpg" alt="Panel discussion at Le Tour Du Hack 2025" class="w-full h-80 object-cover" />
+              </div>
+              <div class="rounded-3xl overflow-hidden border border-[#3A565A]">
+                <img src="./assets/images/25-cake.jpg" alt="Cutting the 10 years of ENUSEC cake at Le Tour Du Hack 2025" class="w-full h-80 object-cover" />
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 2025 PROGRAMME -->
+        <article class="timeline-item">
+          <div class="timeline-dot"></div>
+
+          <div class="rounded-3xl bg-[#2A4245] border border-[#3A565A] shadow-soft p-8 md:p-10">
+            <span class="inline-block text-sm font-bold uppercase tracking-wide text-brand-light">2025 Programme</span>
+            <h3 class="mt-2 text-3xl md:text-4xl font-black">What Was on the Programme?</h3>
+
+            <p class="mt-5 text-[#D9E6E8] leading-relaxed">
+              The 2025 conference day ran across three tracks with a mixture of keynotes, technical talks,
+              panel discussion, and community-focused sessions. It balanced hard technical content with wider
+              career, wellbeing, and industry conversations.
+            </p>
+
+            <div class="mt-8 grid lg:grid-cols-3 gap-6">
+              <div class="p-6 rounded-2xl bg-[#23363A] border border-[#3A565A]">
+                <h4 class="text-xl font-bold text-white">Opening &amp; Closing Keynotes</h4>
+                <p class="mt-3 text-[#D9E6E8]">
+                  The day opened with a keynote from <strong>Prof. Bill Buchanan</strong> and closed with
+                  a keynote from <strong>Cary Hendricks</strong>, framing the event with perspectives from
+                  established voices in cyber security.
+                </p>
+              </div>
+
+              <div class="p-6 rounded-2xl bg-[#23363A] border border-[#3A565A]">
+                <h4 class="text-xl font-bold text-white">Panel Discussion</h4>
+                <p class="mt-3 text-[#D9E6E8]">
+                  A featured panel explored <strong>“Neurodiversity in Cyber - Superpower vs. Kryptonite?”</strong>,
+                  bringing together multiple speakers and perspectives around inclusion, work, and different ways of thinking.
+                </p>
+              </div>
+
+              <div class="p-6 rounded-2xl bg-[#23363A] border border-[#3A565A]">
+                <h4 class="text-xl font-bold text-white">Day Two CTF</h4>
+                <p class="mt-3 text-[#D9E6E8]">
+                  The second day shifted into competition mode with a full-day
+                  <strong>Jeopardy-style Capture The Flag</strong>, giving teams the chance to test their skills
+                  across a range of cyber challenges.
+                </p>
+              </div>
+            </div>
+
+            <div class="mt-10">
+              <h4 class="text-2xl font-black">Talk Highlights</h4>
+              <p class="mt-3 text-[#D9E6E8]">
+                Here are some of the talks that helped define the 2025 programme.
+              </p>
+
+              <div class="mt-6 grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+                <div class="p-6 rounded-2xl bg-[#23363A] border border-[#3A565A]">
+                  <p class="text-sm uppercase tracking-wide text-brand-light font-semibold">Track 1</p>
+                  <h5 class="mt-2 text-lg font-bold">Ransomware Diaries: Hackers, Hostages and the Price of Panic</h5>
+                  <p class="mt-2 text-sm text-white font-semibold">Michael Varley</p>
+                  <p class="mt-3 text-sm text-[#D9E6E8]">
+                    A look into ransomware incidents, attacker behaviour, negotiations, and the consequences for victims.
+                  </p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-[#23363A] border border-[#3A565A]">
+                  <p class="text-sm uppercase tracking-wide text-brand-light font-semibold">Track 2</p>
+                  <h5 class="mt-2 text-lg font-bold">Digital Evidence in the times of Artificial Intelligence</h5>
+                  <p class="mt-2 text-sm text-white font-semibold">Basil Manoussos</p>
+                  <p class="mt-3 text-sm text-[#D9E6E8]">
+                    A future-looking discussion on digital evidence, forensics, and how AI is changing the field.
+                  </p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-[#23363A] border border-[#3A565A]">
+                  <p class="text-sm uppercase tracking-wide text-brand-light font-semibold">Track 3</p>
+                  <h5 class="mt-2 text-lg font-bold">They’re Listening, But is it You That’s Talking!</h5>
+                  <p class="mt-2 text-sm text-white font-semibold">Fraser Wilson</p>
+                  <p class="mt-3 text-sm text-[#D9E6E8]">
+                    Voice assistants, speaker verification, audio-based attacks, and the weirdness of real-world audio security.
+                  </p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-[#23363A] border border-[#3A565A]">
+                  <p class="text-sm uppercase tracking-wide text-brand-light font-semibold">Track 2</p>
+                  <h5 class="mt-2 text-lg font-bold">Modern Cybersecurity Operations: Responsibilities, Knowledge &amp; Skills</h5>
+                  <p class="mt-2 text-sm text-white font-semibold">Harry McLaren</p>
+                  <p class="mt-3 text-sm text-[#D9E6E8]">
+                    Blue team responsibilities, operations knowledge, and the technical and behavioural skills needed in modern cyber roles.
+                  </p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-[#23363A] border border-[#3A565A]">
+                  <p class="text-sm uppercase tracking-wide text-brand-light font-semibold">Track 3</p>
+                  <h5 class="mt-2 text-lg font-bold">From Verification to Infection: ClickFix and Fake CAPTCHA Exploits</h5>
+                  <p class="mt-2 text-sm text-white font-semibold">Cameron Cottam</p>
+                  <p class="mt-3 text-sm text-[#D9E6E8]">
+                    A practical deep dive into how attackers weaponise fake CAPTCHA flows and trick users into running malicious commands.
+                  </p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-[#23363A] border border-[#3A565A]">
+                  <p class="text-sm uppercase tracking-wide text-brand-light font-semibold">Track 2</p>
+                  <h5 class="mt-2 text-lg font-bold">Is my OT becoming Rusty?</h5>
+                  <p class="mt-2 text-sm text-white font-semibold">Eliot Bolster</p>
+                  <p class="mt-3 text-sm text-[#D9E6E8]">
+                    A look at whether Rust has a place in operational technology and critical industrial systems.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 2025 DAY BREAKDOWN -->
+        <article class="timeline-item">
+          <div class="timeline-dot"></div>
+
+          <div class="rounded-3xl bg-[#2A4245] border border-[#3A565A] shadow-soft p-8 md:p-10">
+            <span class="inline-block text-sm font-bold uppercase tracking-wide text-brand-light">2025 Format</span>
+            <h3 class="mt-2 text-3xl md:text-4xl font-black">Two Days, Two Different Energies</h3>
+
+            <div class="mt-8 grid lg:grid-cols-2 gap-8">
+              <div class="p-8 rounded-3xl bg-[#23363A] border border-[#3A565A]">
+                <h4 class="text-2xl font-black text-white">Day 1 - Conference Day</h4>
+                <p class="mt-4 text-[#D9E6E8] leading-relaxed">
+                  Day one focused on ideas, learning, and conversation. Attendees could move between three tracks,
+                  hear from keynote speakers, attend the panel discussion, and choose from sessions covering
+                  ransomware, DFIR, OT, digital evidence, syscalls, deception, cyber careers, audio attacks, and more.
+                </p>
+                <ul class="mt-5 space-y-2 text-[#D9E6E8]">
+                  <li>• Registration and opening remarks</li>
+                  <li>• Opening keynote</li>
+                  <li>• Three tracks of talks</li>
+                  <li>• Panel discussion</li>
+                  <li>• Closing keynote and remarks</li>
+                </ul>
+              </div>
+
+              <div class="p-8 rounded-3xl bg-[#23363A] border border-[#3A565A]">
+                <h4 class="text-2xl font-black text-white">Day 2 - Capture The Flag</h4>
+                <p class="mt-4 text-[#D9E6E8] leading-relaxed">
+                  Day two was all about challenge-solving and competition. The CTF ran as a Jeopardy-style event,
+                  welcoming both newcomers and experienced players to tackle a range of tasks and battle for the top of the scoreboard.
+                </p>
+                <ul class="mt-5 space-y-2 text-[#D9E6E8]">
+                  <li>• Morning registration</li>
+                  <li>• CTF competition launch</li>
+                  <li>• Pizza lunch pause</li>
+                  <li>• Afternoon push to the finish</li>
+                  <li>• A strong community competition atmosphere</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- MORE 2025 PHOTOS -->
+        <article class="timeline-item">
+          <div class="timeline-dot"></div>
+
+          <div class="rounded-3xl bg-[#2A4245] border border-[#3A565A] shadow-soft p-8 md:p-10">
+            <span class="inline-block text-sm font-bold uppercase tracking-wide text-brand-light">More photos from 2025</span>
+
+            <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div class="rounded-2xl overflow-hidden border border-[#3A565A]">
+                <img src="./assets/images/25-FW.jpg" alt="Fraser W delivering his talk at Le Tour Du Hack 2025" class="w-full h-56 object-cover" />
+              </div>
+              <div class="rounded-2xl overflow-hidden border border-[#3A565A]">
+                <img src="./assets/images/25-committee.jpg" alt="The 2024/25 ENUSEC committee at Le Tour Du Hack 2025" class="w-full h-56 object-cover" />
+              </div>
+              <div class="rounded-2xl overflow-hidden border border-[#3A565A]">
+                <img src="./assets/images/25-picks.jpg" alt="Lock picking workshop at Le Tour Du Hack 2025" class="w-full h-56 object-cover" />
+              </div>
+              <div class="rounded-2xl overflow-hidden border border-[#3A565A]">
+                <img src="./assets/images/25-Keynote.jpg" alt="The opening keynote Le Tour Du Hack 2025" class="w-full h-56 object-cover" />
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 bg-[#2A4245] text-center">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-4xl font-black">Be Part of the Next Chapter</h2>
+      <p class="mt-5 text-lg text-[#D9E6E8] leading-relaxed">
+        2025 showed what Le Tour Du Hack could be. 2026 is your chance to experience it.
+      </p>
+      <div class="mt-8 flex flex-wrap justify-center gap-4">
+        <a href="./index.html" class="px-8 py-4 rounded-xl font-semibold shadow-soft text-white bg-brand-primary text-lg">
+          Visit the 2026 Event Page
+        </a>
+        <a href="#year-2025" class="px-8 py-4 rounded-xl font-semibold text-brand-primary border border-brand-primary bg-[#1A2527]/80 text-lg">
+          Back to 2025
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#1A2527] text-[#D9E6E8] py-12">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6">
+      <div class="grid md:grid-cols-3 gap-8">
+        <div>
+          <div class="font-black text-white">Le Tour Du Hack</div>
+          <p class="mt-4 text-sm">An ENUSEC event</p>
+        </div>
+        <div>
+          <div class="font-semibold">Contact</div>
+          <ul class="mt-3 space-y-2 text-sm">
+            <li><a class="hover:underline" href="mailto:team@enusec.org">team@enusec.org</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-10 text-xs text-slate-500">© <span id="year"></span> ENUSEC&gt;_ All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
