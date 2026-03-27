@@ -53,6 +53,7 @@
         <a href="#programme">Programme</a>
         <a href="#cfp">Call For Speakers</a>
         <a href="#sponsors">Sponsors</a>
+        <a href="./history.html">Previous Years</a>
       </nav>
     </div>
   </header>
@@ -326,9 +327,9 @@
         const secs  = Math.floor((diff / 1000) % 60);
         el.textContent = `Event starts in ${days}d ${hours}h ${mins}m ${secs}s`;
       } else if (now >= eventStart && now <= eventEnd) {
-        el.textContent = '🔴 LIVE NOW — Welcome to Le Tour Du Hack!';
+        el.textContent = '🔴 LIVE NOW - Welcome to Le Tour Du Hack!';
       } else {
-        el.textContent = '✔️ Le Tour Du Hack 2026 has ended — see you next year!';
+        el.textContent = '✔️ Le Tour Du Hack 2026 has ended - see you next year!';
       }
     }
 
