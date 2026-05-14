@@ -94,7 +94,16 @@
           <p class="text-sm font-bold uppercase tracking-[0.2em] text-brand-light">Schedule</p>
           <h2 class="mt-2 text-3xl md:text-4xl font-black text-white">What to look forward to on the day!</h2>
 
-          <pretalx-schedule event-url="https://speak.enusec.org/le-tour-du-hack-2026/" locale="en" format="grid" style="--pretalx-clr-primary: #50a8b7" date-filter="2026-05-16"></pretalx-schedule>
+          <div class="w-full max-w-full overflow-x-auto rounded-2xl">
+            <pretalx-schedule
+            class="block min-w-0"
+            event-url="https://speak.enusec.org/le-tour-du-hack-2026/"
+            locale="en"
+            format="grid"
+            style="--pretalx-clr-primary: #50a8b7"
+            date-filter="2026-05-16">
+            </pretalx-schedule>
+          </div>
           <noscript>
             <div class="pretalx-widget">
               <div class="pretalx-widget-info-message">
